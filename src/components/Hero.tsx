@@ -55,7 +55,7 @@ const Hero = () => {
   return <motion.div className="relative mt-16 md:mt-0 w-full" initial="hidden" animate="visible" variants={containerVariants}>
       <div className="banner-container bg-black relative overflow-hidden h-[60vh] sm:h-[70vh] md:h-[750px] w-full">
         <div className="absolute inset-0 bg-black w-full">
-          <img src="/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png" alt="Children playing and learning together" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
+          <img src="/lovable-uploads/7099277f-3325-4f48-84cf-95aa74030125.png" alt="Young caregiver holding child - representing our ministry's mission" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-white"></div>
         </div>
         
