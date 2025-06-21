@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,7 +17,7 @@ const LeadershipPreview = () => {
       name: "Dr. James Mukisa",
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
-      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
+      image: "/lovable-uploads/c4e4a1b0-789a-442a-8f11-a675ea04262e.png"
     },
     {
       name: "Grace Namugga",
