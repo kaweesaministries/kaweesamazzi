@@ -1,8 +1,10 @@
+
 import { motion } from "framer-motion";
 import { Building, Globe, Heart, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const PartnershipShowcase = () => {
   const partnerCategories = [{
     title: "Corporate Partners",
@@ -23,6 +25,7 @@ const PartnershipShowcase = () => {
     count: "8+",
     description: "Global organizations amplifying our impact"
   }];
+
   const featuredPartners = [{
     name: "World Vision International",
     logo: "/lovable-uploads/39605e90-8478-4fee-b1b9-cee41df66f10.png",
@@ -48,6 +51,7 @@ const PartnershipShowcase = () => {
     logo: "/lovable-uploads/700e27d7-0513-4bfa-8ac4-f7fd6087594c.png",
     partnership: "Educational Support"
   }];
+
   const collaborationImages = [{
     src: "/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png",
     alt: "Partnership meeting with community leaders",
@@ -61,6 +65,110 @@ const PartnershipShowcase = () => {
     alt: "Training workshop with partners",
     title: "Capacity Building"
   }];
-  return;
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-4">Our Strategic Partnerships</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Working together with trusted organizations to amplify our impact and reach more children in need
+          </p>
+        </motion.div>
+
+        {/* Partnership Categories */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {partnerCategories.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${category.color}`}>
+                    {category.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                  <div className="text-3xl font-bold text-orange-600 mb-2">{category.count}</div>
+                  <p className="text-gray-600">{category.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Featured Partners */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-12"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Featured Partners</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {featuredPartners.map((partner, index) => (
+              <Card key={index} className="p-4 text-center hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-2">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1">{partner.name}</h4>
+                  <p className="text-xs text-gray-600">{partner.partnership}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Collaboration Images */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-8"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Partnership in Action</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {collaborationImages.map((image, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-4">
+                  <h4 className="font-semibold">{image.title}</h4>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <Link to="/partners">
+            <Button size="lg">
+              View All Partners
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default PartnershipShowcase;
