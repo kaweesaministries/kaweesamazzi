@@ -3,7 +3,9 @@ import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import QuickImpactStats from '@/components/QuickImpactStats';
 import AboutMinistry from '@/components/AboutMinistry';
+import LeadershipPreview from '@/components/LeadershipPreview';
 import ProgramsPreview from '@/components/ProgramsPreview';
+import PartnershipShowcase from '@/components/PartnershipShowcase';
 import ImpactStories from '@/components/ImpactStories';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HowToHelp from '@/components/HowToHelp';
@@ -35,7 +37,9 @@ const Index = () => {
       <Hero />
       <QuickImpactStats />
       <AboutMinistry />
+      <LeadershipPreview />
       <ProgramsPreview />
+      <PartnershipShowcase />
       <ImpactStories />
       <TestimonialsCarousel />
       <HowToHelp />
