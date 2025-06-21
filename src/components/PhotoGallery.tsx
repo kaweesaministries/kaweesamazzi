@@ -1,18 +1,9 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import InteractiveImage from './InteractiveImage';
-
-interface GalleryImage {
-  id: string;
-  src: string;
-  alt: string;
-  title: string;
-  description?: string;
-  category: string;
-}
+import PhotoFilters from './PhotoFilters';
+import PhotoGrid, { GalleryImage } from './PhotoGrid';
+import PhotoLightbox from './PhotoLightbox';
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
@@ -138,97 +129,23 @@ const PhotoGallery = () => {
           </p>
         </motion.div>
 
-        {/* Filter Buttons - Made smaller */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map((category) => (
-            <Button
-              key={category.key}
-              variant={filter === category.key ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter(category.key)}
-              className="mb-2 text-xs md:text-sm"
-            >
-              {category.label}
-            </Button>
-          ))}
-        </div>
+        <PhotoFilters 
+          categories={categories}
+          activeFilter={filter}
+          onFilterChange={setFilter}
+        />
 
-        {/* Compact Image Grid - 3 columns like Leadership */}
-        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
-          {filteredImages.map((image, index) => (
-            <motion.div
-              key={image.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card 
-                className="cursor-pointer hover:shadow-lg transition-all duration-300 overflow-hidden group"
-                onClick={() => setSelectedImage(image)}
-              >
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-3 md:p-6">
-                  <h3 className="text-sm md:text-lg font-bold mb-1">{image.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-600 line-clamp-2">{image.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <PhotoGrid 
+          images={filteredImages}
+          onImageSelect={setSelectedImage}
+        />
 
-        {/* Lightbox Modal */}
-        {selectedImage && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-            <div className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg overflow-hidden">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm"
-                onClick={() => setSelectedImage(null)}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-              
-              {/* Navigation Buttons */}
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm"
-                onClick={() => navigateImage('prev')}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm"
-                onClick={() => navigateImage('next')}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-
-              <div className="max-h-[70vh] overflow-hidden">
-                <InteractiveImage
-                  src={selectedImage.src}
-                  alt={selectedImage.alt}
-                  className="w-full h-full"
-                />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{selectedImage.title}</h3>
-                <p className="text-gray-600">{selectedImage.description}</p>
-              </div>
-            </div>
-          </div>
-        )}
+        <PhotoLightbox
+          selectedImage={selectedImage}
+          images={filteredImages}
+          onClose={() => setSelectedImage(null)}
+          onNavigate={navigateImage}
+        />
       </div>
     </section>
   );
