@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,19 +10,19 @@ const LeadershipPreview = () => {
       name: "Kaweesa Medard",
       role: "Founder & Executive Director",
       bio: "5+ years in child welfare and community development",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
       name: "Dr. James Mukisa",
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
       name: "Grace Namugga",
       role: "Community Outreach Manager",
       bio: "Local community leader with grassroots experience",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     }
   ];
 
