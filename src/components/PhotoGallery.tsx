@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -91,38 +90,6 @@ const PhotoGallery = () => {
       title: 'Health & Wellness',
       description: 'Promoting health and wellness through various community programs',
       category: 'health'
-    },
-    {
-      id: '10',
-      src: 'https://github.com/drewversedesign/kaweesta-ministries/blob/main/IMG-20250518-WA0170.jpg?raw=true',
-      alt: 'Skills development training',
-      title: 'Skills Development',
-      description: 'Providing practical skills training for sustainable livelihoods',
-      category: 'empowerment'
-    },
-    {
-      id: '11',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0172.jpg?raw=true',
-      alt: 'Community support initiatives',
-      title: 'Community Support',
-      description: 'Collaborative efforts to strengthen community bonds and support systems',
-      category: 'community'
-    },
-    {
-      id: '12',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0066.jpg?raw=true',
-      alt: 'Child protection and care',
-      title: 'Child Care & Protection',
-      description: 'Ensuring every child receives proper care and protection',
-      category: 'protection'
-    },
-    {
-      id: '13',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0064.jpg?raw=true',
-      alt: 'Educational support and mentoring',
-      title: 'Educational Mentoring',
-      description: 'One-on-one mentoring and educational support for children',
-      category: 'education'
     }
   ];
 
@@ -136,8 +103,8 @@ const PhotoGallery = () => {
   ];
 
   const filteredImages = filter === 'all' 
-    ? images 
-    : images.filter(img => img.category === filter);
+    ? images.slice(0, 9) // Show only first 9 images for compact display
+    : images.filter(img => img.category === filter).slice(0, 9);
 
   const currentIndex = selectedImage 
     ? filteredImages.findIndex(img => img.id === selectedImage.id)
@@ -171,7 +138,7 @@ const PhotoGallery = () => {
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
+        {/* Filter Buttons - Made smaller */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map((category) => (
             <Button
@@ -179,15 +146,15 @@ const PhotoGallery = () => {
               variant={filter === category.key ? "default" : "outline"}
               size="sm"
               onClick={() => setFilter(category.key)}
-              className="mb-2"
+              className="mb-2 text-xs md:text-sm"
             >
               {category.label}
             </Button>
           ))}
         </div>
 
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {/* Compact Image Grid - 3 columns like Leadership */}
+        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
           {filteredImages.map((image, index) => (
             <motion.div
               key={image.id}
@@ -199,16 +166,16 @@ const PhotoGallery = () => {
                 className="cursor-pointer hover:shadow-lg transition-all duration-300 overflow-hidden group"
                 onClick={() => setSelectedImage(image)}
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-square overflow-hidden">
                   <img 
                     src={image.src} 
                     alt={image.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold mb-1">{image.title}</h3>
-                  <p className="text-sm text-gray-600">{image.description}</p>
+                <CardContent className="p-3 md:p-6">
+                  <h3 className="text-sm md:text-lg font-bold mb-1">{image.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-600 line-clamp-2">{image.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
