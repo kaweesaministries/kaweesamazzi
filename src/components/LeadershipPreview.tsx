@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +7,7 @@ import { Link } from "react-router-dom";
 const LeadershipPreview = () => {
   const leaders = [
     {
-      name: "Sarah Kaweesa",
+      name: "Kaweesa Medard",
       role: "Founder & Executive Director",
       bio: "20+ years in child welfare and community development",
       image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
