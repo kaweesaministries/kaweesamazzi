@@ -1,4 +1,5 @@
 
+
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,12 +19,6 @@ const LeadershipPreview = () => {
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
       image: "/lovable-uploads/c4e4a1b0-789a-442a-8f11-a675ea04262e.png"
-    },
-    {
-      name: "Grace Namugga",
-      role: "Community Outreach Manager",
-      bio: "Local community leader with grassroots experience",
-      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     }
   ];
 
@@ -42,7 +37,7 @@ const LeadershipPreview = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-8 mb-8 max-w-4xl mx-auto">
           {leaders.map((leader, index) => (
             <motion.div
               key={index}
@@ -51,17 +46,17 @@ const LeadershipPreview = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-3 md:p-6">
-                  <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full overflow-hidden bg-gray-200">
+                <CardContent className="p-4 md:p-6">
+                  <div className="w-20 h-20 md:w-32 md:h-32 mx-auto mb-3 md:mb-4 rounded-full overflow-hidden bg-gray-200">
                     <img 
                       src={leader.image} 
                       alt={leader.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-sm md:text-lg font-bold mb-1">{leader.name}</h3>
-                  <p className="text-orange-600 font-medium text-xs md:text-sm mb-1 md:mb-2">{leader.role}</p>
-                  <p className="text-gray-600 text-xs md:text-sm">{leader.bio}</p>
+                  <h3 className="text-base md:text-xl font-bold mb-2">{leader.name}</h3>
+                  <p className="text-orange-600 font-medium text-sm md:text-base mb-2">{leader.role}</p>
+                  <p className="text-gray-600 text-sm md:text-base">{leader.bio}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -82,3 +77,4 @@ const LeadershipPreview = () => {
 };
 
 export default LeadershipPreview;
+
