@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,7 +19,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Programs from "./pages/Programs";
 import SponsorChild from "./pages/SponsorChild";
 import Events from "./pages/Events";
-import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
 import Testimonials from "./pages/Testimonials";
 
@@ -43,7 +43,6 @@ const App = () => {
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/sponsor-child" element={<SponsorChild />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/partners" element={<Partners />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />

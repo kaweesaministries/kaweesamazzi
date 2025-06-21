@@ -155,12 +155,6 @@ const Navbar = () => {
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 w-[400px]">
                       <li>
-                        <Link to="/partners" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Partners</div>
-                          <p className="text-sm text-gray-500">Organizations supporting our mission</p>
-                        </Link>
-                      </li>
-                      <li>
                         <Link to="/resources" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
                           <div className="font-medium">Resources</div>
                           <p className="text-sm text-gray-500">Reports, policies, and documentation</p>

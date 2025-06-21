@@ -1,3 +1,4 @@
+
 import { ArrowRight, Linkedin, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -101,7 +102,6 @@ const Footer = () => {
               <li><Link to="/sponsor-child" className="text-gray-300 hover:text-orange-400 transition-colors">Sponsor a Child</Link></li>
               <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400 transition-colors">Volunteer</Link></li>
               <li><Link to="/events" className="text-gray-300 hover:text-orange-400 transition-colors">Upcoming Events</Link></li>
-              <li><Link to="/partners" className="text-gray-300 hover:text-orange-400 transition-colors">Partner With Us</Link></li>
             </ul>
             <Button 
               onClick={handleDonateClick}
