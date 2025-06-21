@@ -39,7 +39,7 @@ const ProgramsPreview = () => {
       icon: <Users className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600",
       served: "25+ families",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0170.jpg?raw=true",
+      image: "/lovable-uploads/1aef3f11-afc1-4188-84e6-1b175af029f8.png",
       activities: ["Skills Training", "Microfinance", "Business Support"]
     }
   ];
