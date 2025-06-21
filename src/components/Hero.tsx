@@ -1,4 +1,5 @@
 
+
 import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
@@ -94,30 +95,30 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
-        <motion.div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4" variants={containerVariants} initial="hidden" animate="visible" transition={{
+        <motion.div className="mt-6 md:mt-8 grid grid-cols-3 gap-2 md:gap-4" variants={containerVariants} initial="hidden" animate="visible" transition={{
         delay: 0.6
       }}>
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-100 flex items-center justify-center rounded-lg text-orange-600 mb-2 md:mb-3">
-              <BookOpen className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
+            <div className="w-8 h-8 md:w-12 md:h-12 bg-orange-100 flex items-center justify-center rounded-lg text-orange-600 mb-2 md:mb-3">
+              <BookOpen className="w-4 h-4 md:w-6 md:h-6" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Education</h3>
+            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Education</h3>
             <p className="text-gray-600 text-xs md:text-sm">Providing quality education and learning opportunities to help children build brighter futures.</p>
           </motion.div>
           
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 flex items-center justify-center rounded-lg text-blue-600 mb-2 md:mb-3">
-              <Shield className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
+            <div className="w-8 h-8 md:w-12 md:h-12 bg-blue-100 flex items-center justify-center rounded-lg text-blue-600 mb-2 md:mb-3">
+              <Shield className="w-4 h-4 md:w-6 md:h-6" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Protection</h3>
+            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Protection</h3>
             <p className="text-gray-600 text-xs md:text-sm">Ensuring children's safety, rights, and wellbeing through comprehensive protection programs.</p>
           </motion.div>
           
-          <motion.div className="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-green-100 flex items-center justify-center rounded-lg text-green-600 mb-2 md:mb-3">
-              <Users className="w-5 h-5 md:w-6 md:h-6" />
+          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
+            <div className="w-8 h-8 md:w-12 md:h-12 bg-green-100 flex items-center justify-center rounded-lg text-green-600 mb-2 md:mb-3">
+              <Users className="w-4 h-4 md:w-6 md:h-6" />
             </div>
-            <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Community</h3>
+            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Community</h3>
             <p className="text-gray-600 text-xs md:text-sm">Building stronger communities that support and nurture children's growth and development.</p>
           </motion.div>
         </motion.div>
@@ -126,3 +127,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
