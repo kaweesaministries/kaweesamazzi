@@ -1,11 +1,16 @@
 
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
+import QuickImpactStats from '@/components/QuickImpactStats';
 import AboutMinistry from '@/components/AboutMinistry';
-import Programs from '@/components/Programs';
+import ProgramsPreview from '@/components/ProgramsPreview';
 import ImpactStories from '@/components/ImpactStories';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HowToHelp from '@/components/HowToHelp';
+import VolunteerOpportunitiesPreview from '@/components/VolunteerOpportunitiesPreview';
+import DonationImpactSection from '@/components/DonationImpactSection';
 import NewsPreview from '@/components/NewsPreview';
+import UpcomingEventsPreview from '@/components/UpcomingEventsPreview';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 
@@ -28,11 +33,16 @@ const Index = () => {
         keywords={['children ministry', 'Uganda foundation', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
       />
       <Hero />
+      <QuickImpactStats />
       <AboutMinistry />
-      <Programs />
+      <ProgramsPreview />
       <ImpactStories />
+      <TestimonialsCarousel />
       <HowToHelp />
+      <VolunteerOpportunitiesPreview />
+      <DonationImpactSection />
       <NewsPreview />
+      <UpcomingEventsPreview />
     </PageLayout>
   );
 };
