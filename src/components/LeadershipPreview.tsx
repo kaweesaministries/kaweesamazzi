@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,7 +42,7 @@ const LeadershipPreview = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
           {leaders.map((leader, index) => (
             <motion.div
               key={index}
@@ -50,17 +51,17 @@ const LeadershipPreview = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
+                <CardContent className="p-3 md:p-6">
+                  <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full overflow-hidden bg-gray-200">
                     <img 
                       src={leader.image} 
                       alt={leader.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-lg font-bold mb-1">{leader.name}</h3>
-                  <p className="text-orange-600 font-medium text-sm mb-2">{leader.role}</p>
-                  <p className="text-gray-600 text-sm">{leader.bio}</p>
+                  <h3 className="text-sm md:text-lg font-bold mb-1">{leader.name}</h3>
+                  <p className="text-orange-600 font-medium text-xs md:text-sm mb-1 md:mb-2">{leader.role}</p>
+                  <p className="text-gray-600 text-xs md:text-sm">{leader.bio}</p>
                 </CardContent>
               </Card>
             </motion.div>
