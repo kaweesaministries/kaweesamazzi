@@ -1,5 +1,4 @@
-
-import { ArrowRight, Heart, Users, BookOpen, Shield } from "lucide-react";
+import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
 
@@ -51,6 +50,11 @@ const Hero = () => {
       });
     }
   };
+
+  const handleDonateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+  };
   
   return <motion.div className="relative mt-16 md:mt-0 w-full" initial="hidden" animate="visible" variants={containerVariants}>
       <div className="banner-container bg-black relative overflow-hidden h-[60vh] sm:h-[70vh] md:h-[750px] w-full">
@@ -69,17 +73,17 @@ const Hero = () => {
               <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
                 <button 
                   className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl hover:shadow-orange-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
-                  onClick={scrollToPrograms}
+                  onClick={handleDonateClick}
                 >
-                  Our Programs
+                  Donate Now
                   <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
                 </button>
                 
                 <button 
                   className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-all shadow-lg hover:shadow-xl hover:shadow-green-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
-                  onClick={scrollToContact}
+                  onClick={scrollToPrograms}
                 >
-                  Get Involved
+                  Our Programs
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </motion.div>

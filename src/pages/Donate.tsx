@@ -1,6 +1,6 @@
 
 import PageLayout from '@/components/PageLayout';
-import { ArrowLeft, Heart, Users, BookOpen, Utensils, Shield, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Heart, Users, BookOpen, Utensils, Shield, CheckCircle, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
@@ -18,27 +18,35 @@ const Donate = () => {
       amount: "$25",
       description: "Provides school supplies for one child for a month",
       icon: <BookOpen className="w-8 h-8" />,
-      color: "bg-blue-100 text-blue-600"
+      color: "bg-blue-100 text-blue-600",
+      paypalUrl: "https://www.paypal.me/Fiona202283/25"
     },
     {
       amount: "$50",
       description: "Feeds a child nutritious meals for one month",
       icon: <Utensils className="w-8 h-8" />,
-      color: "bg-green-100 text-green-600"
+      color: "bg-green-100 text-green-600",
+      paypalUrl: "https://www.paypal.me/Fiona202283/50"
     },
     {
       amount: "$100",
       description: "Covers medical care and health screenings for one child",
       icon: <Shield className="w-8 h-8" />,
-      color: "bg-red-100 text-red-600"
+      color: "bg-red-100 text-red-600",
+      paypalUrl: "https://www.paypal.me/Fiona202283/100"
     },
     {
       amount: "$200",
       description: "Sponsors a child's education for one term",
       icon: <Users className="w-8 h-8" />,
-      color: "bg-purple-100 text-purple-600"
+      color: "bg-purple-100 text-purple-600",
+      paypalUrl: "https://www.paypal.me/Fiona202283/200"
     }
   ];
+  
+  const handleDonationClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
   
   return (
     <PageLayout>
@@ -83,9 +91,13 @@ const Donate = () => {
                         {option.icon}
                       </div>
                       <h3 className="text-2xl font-bold mb-2">{option.amount}</h3>
-                      <p className="text-gray-600 text-sm">{option.description}</p>
-                      <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">
+                      <p className="text-gray-600 text-sm mb-4">{option.description}</p>
+                      <Button 
+                        className="w-full bg-orange-500 hover:bg-orange-600"
+                        onClick={() => handleDonationClick(option.paypalUrl)}
+                      >
                         Donate {option.amount}
+                        <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     </CardContent>
                   </Card>
@@ -118,8 +130,12 @@ const Donate = () => {
                   <div className="text-orange-100">Family Support</div>
                 </div>
               </div>
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg">
+              <Button 
+                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg"
+                onClick={() => handleDonationClick("https://www.paypal.me/Fiona202283")}
+              >
                 Start Monthly Sponsorship
+                <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </motion.div>
             
@@ -179,8 +195,12 @@ const Donate = () => {
             </div>
             
             <div className="text-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 text-lg">
+              <Button 
+                className="bg-orange-500 hover:bg-orange-600 px-8 py-3 text-lg"
+                onClick={() => handleDonationClick("https://www.paypal.me/Fiona202283")}
+              >
                 Make a Custom Donation
+                <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
               <p className="text-gray-600 mt-4">
                 Have questions about donating? <Link to="/contact" className="text-orange-600 hover:underline">Contact us</Link>

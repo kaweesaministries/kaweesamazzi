@@ -1,8 +1,14 @@
-
-import { Heart, Users, Gift, HandHeart, Calendar, Megaphone } from "lucide-react";
+import { Heart, Users, Gift, HandHeart, Calendar, Megaphone, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const HowToHelp = () => {
+  const handleDonateClick = (amount?: string) => {
+    const url = amount 
+      ? `https://www.paypal.me/Fiona202283/${amount}`
+      : "https://www.paypal.me/Fiona202283";
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   const ways = [
     {
       icon: Heart,
@@ -10,6 +16,7 @@ const HowToHelp = () => {
       description: "Sponsor a child's education, health, and basic needs with a monthly commitment starting from $30.",
       action: "Sponsor a Child",
       color: "bg-red-100 text-red-600",
+      onClick: () => handleDonateClick("30")
     },
     {
       icon: Gift,
@@ -17,6 +24,7 @@ const HowToHelp = () => {
       description: "Make a single donation to support our programs and help us reach more children in need.",
       action: "Donate Now",
       color: "bg-blue-100 text-blue-600",
+      onClick: () => handleDonateClick()
     },
     {
       icon: Users,
@@ -73,8 +81,14 @@ const HowToHelp = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{way.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{way.description}</p>
-                <button className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm">
+                <button 
+                  onClick={way.onClick || (() => {})}
+                  className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm flex items-center justify-center mx-auto"
+                >
                   {way.action}
+                  {(way.title === "Monthly Sponsorship" || way.title === "One-Time Donation") && (
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  )}
                 </button>
               </CardContent>
             </Card>
@@ -108,11 +122,19 @@ const HowToHelp = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <h4 className="text-xl font-semibold mb-4">Start Making a Difference Today</h4>
               <div className="space-y-3">
-                <button className="w-full py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                <button 
+                  onClick={() => handleDonateClick("30")}
+                  className="w-full py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-medium flex items-center justify-center"
+                >
                   Donate $30/month - Sponsor a Child
+                  <ExternalLink className="ml-2 h-4 w-4" />
                 </button>
-                <button className="w-full py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium">
+                <button 
+                  onClick={() => handleDonateClick()}
+                  className="w-full py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium flex items-center justify-center"
+                >
                   Make a One-Time Donation
+                  <ExternalLink className="ml-2 h-4 w-4" />
                 </button>
                 <button className="w-full py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors font-medium">
                   Learn About Volunteering

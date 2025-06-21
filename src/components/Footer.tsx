@@ -1,8 +1,9 @@
-import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -64,6 +65,10 @@ const Footer = () => {
     }
   };
 
+  const handleDonateClick = () => {
+    window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8 w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -91,13 +96,20 @@ const Footer = () => {
           
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">Get Involved</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
               <li><Link to="/donate" className="text-gray-300 hover:text-orange-400 transition-colors">Make a Donation</Link></li>
               <li><Link to="/sponsor-child" className="text-gray-300 hover:text-orange-400 transition-colors">Sponsor a Child</Link></li>
               <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400 transition-colors">Volunteer</Link></li>
               <li><Link to="/events" className="text-gray-300 hover:text-orange-400 transition-colors">Upcoming Events</Link></li>
               <li><Link to="/partners" className="text-gray-300 hover:text-orange-400 transition-colors">Partner With Us</Link></li>
             </ul>
+            <Button 
+              onClick={handleDonateClick}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium"
+            >
+              Donate with PayPal
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
           </div>
           
           <div>
