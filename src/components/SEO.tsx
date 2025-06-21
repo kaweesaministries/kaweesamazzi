@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -17,53 +18,50 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'WRLDS',
-  description = 'WRLDS Technologies: Pioneering smart engineering solutions with textile sensors for sports, safety, and performance monitoring.',
+  title = 'KAWEESA CHILDREN\'S MINISTRY LIMITED - Transforming Lives Through Love and Care',
+  description = 'KAWEESA CHILDREN\'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
-  name = 'WRLDS Technologies',
-  imageUrl = '/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
+  name = 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
+  imageUrl = '/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
   publishDate,
   modifiedDate,
   author,
   category,
-  keywords = ['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics'],
+  keywords = ['children ministry', 'Uganda foundation', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization'],
   isBlogPost = false
 }) => {
   const location = useLocation();
-  const currentUrl = `https://wrlds.com${location.pathname}`;
-  const absoluteImageUrl = imageUrl.startsWith('http') ? imageUrl : `https://wrlds.com${imageUrl}`;
+  const currentUrl = `https://kaweesachildrensministry.org${location.pathname}`;
+  const absoluteImageUrl = imageUrl.startsWith('http') ? imageUrl : `https://kaweesachildrensministry.org${imageUrl}`;
 
   // Enhanced keywords for specific posts
-  const enhancedKeywords = location.pathname.includes('smart-ppe-revolution') 
+  const enhancedKeywords = location.pathname.includes('education-center-kampala') 
     ? [
         ...keywords,
-        'personal protective equipment',
-        'workplace safety solutions',
-        'smart safety gear',
-        'construction safety technology',
-        'industrial safety monitoring',
-        'occupational health technology',
-        'safety compliance',
-        'worker protection systems',
-        'smart hard hats',
-        'connected safety equipment'
+        'education center',
+        'Kampala schools',
+        'children education Uganda',
+        'learning facilities',
+        'quality education',
+        'educational support',
+        'school programs',
+        'academic excellence',
+        'educational infrastructure',
+        'student support'
       ]
-    : location.pathname.includes('wearable-safety-tech-protecting-workers-roi')
+    : location.pathname.includes('health-screening-children')
     ? [
         ...keywords,
-        'workplace injury costs',
-        'safety ROI',
-        'workers compensation savings',
-        'ergonomic sensors',
-        'workplace safety investment',
-        'safety technology ROI',
-        'industrial wearables',
-        'safety cost reduction',
-        'occupational safety economics',
-        'safety technology partnerships',
-        'workplace injury statistics',
-        'safety equipment financing',
-        'injury prevention technology'
+        'health screening',
+        'children health Uganda',
+        'medical checkups',
+        'vaccinations',
+        'health education',
+        'preventive healthcare',
+        'child health programs',
+        'medical outreach',
+        'healthcare access',
+        'community health'
       ]
     : keywords;
 
@@ -71,19 +69,22 @@ const SEO: React.FC<SEOProps> = ({
   const organizationStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'WRLDS Technologies',
-    url: 'https://wrlds.com',
-    logo: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
-    description: 'Pioneering smart engineering solutions with textile sensors',
+    name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
+    url: 'https://kaweesachildrensministry.org',
+    logo: 'https://kaweesachildrensministry.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
+    description: 'Transforming children\'s lives through love, care, education, and community development in Uganda',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'info@wrlds.com'
+      email: 'info@kaweesachildrensministry.org'
     },
-    sameAs: [
-      'https://www.linkedin.com/company/wrlds-technologies',
-      'https://twitter.com/wrldstechnologies'
-    ]
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'Uganda',
+      addressRegion: 'Central Region'
+    },
+    foundingDate: '2020',
+    mission: 'To transform the lives of children through love, care, education, health, protection, and community development programs'
   };
 
   // Enhanced BlogPosting JSON-LD structured data
@@ -105,19 +106,19 @@ const SEO: React.FC<SEOProps> = ({
     dateModified: modifiedDate || publishDate,
     author: {
       '@type': 'Organization',
-      name: author || 'WRLDS Technologies',
-      url: 'https://wrlds.com'
+      name: author || 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
+      url: 'https://kaweesachildrensministry.org'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'WRLDS Technologies',
+      name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wrlds.com/lovable-uploads/14ea3fe0-19d6-425c-b95b-4117bc41f3ca.png',
+        url: 'https://kaweesachildrensministry.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
         width: 512,
         height: 512
       },
-      url: 'https://wrlds.com'
+      url: 'https://kaweesachildrensministry.org'
     },
     description: description,
     keywords: enhancedKeywords.join(', '),
@@ -126,65 +127,65 @@ const SEO: React.FC<SEOProps> = ({
     isAccessibleForFree: true
   } : null;
 
-  // Add FAQ structured data for Smart PPE post
-  const smartPPEFAQData = location.pathname.includes('smart-ppe-revolution') ? {
+  // Add FAQ structured data for Education Center post
+  const educationCenterFAQData = location.pathname.includes('education-center-kampala') ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is Smart PPE?',
+        name: 'What services does the new education center provide?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Smart PPE (Personal Protective Equipment) refers to traditional safety gear enhanced with sensors, connectivity, and intelligence. Unlike ordinary PPE that acts as a passive barrier, smart PPE actively monitors conditions and provides real-time alerts to prevent accidents.'
+          text: 'The new education center in Kampala provides quality learning facilities, dedicated teachers, educational support programs, and serves over 200 children in the area with comprehensive educational services.'
         }
       },
       {
         '@type': 'Question',
-        name: 'How does smart PPE improve workplace safety?',
+        name: 'How can children enroll in KAWEESA CHILDREN\'S MINISTRY programs?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Smart PPE improves safety by providing real-time monitoring of environmental conditions, worker health metrics, and potential hazards. It can detect falls, monitor vital signs, sense toxic gases, and automatically alert emergency responders when needed.'
+          text: 'Families can contact KAWEESA CHILDREN\'S MINISTRY LIMITED directly through our website or visit our education center in Kampala. We work with families to ensure children have access to quality education regardless of their financial situation.'
         }
       },
       {
         '@type': 'Question',
-        name: 'What industries benefit from smart PPE?',
+        name: 'What makes this education center different?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Smart PPE benefits multiple industries including construction, manufacturing, oil & gas, fire & rescue, healthcare, mining, and any workplace where safety is paramount. Each industry can customize the technology to address specific safety challenges.'
+          text: 'Our education center focuses on holistic child development, combining quality academics with character building, health support, and community involvement. We provide not just education, but comprehensive care for each child.'
         }
       }
     ]
   } : null;
 
-  // Add FAQ structured data for Wearable Safety Tech ROI post
-  const wearableSafetyROIFAQData = location.pathname.includes('wearable-safety-tech-protecting-workers-roi') ? {
+  // Add FAQ structured data for Health Screening post
+  const healthScreeningFAQData = location.pathname.includes('health-screening-children') ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How much do workplace injuries cost?',
+        name: 'What does the health screening program include?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'According to the National Safety Council, the average cost for a medically consulted work injury is $43,000 in 2023. With 2.2 injuries per 100 full-time workers, a 200-person site can expect about $215,000 in injury costs annually before accounting for downtime or replacement training.'
+          text: 'Our health screening program includes comprehensive medical checkups, vaccinations, health education, nutritional assessments, and referrals for specialized care when needed. We serve children across multiple communities in rural Uganda.'
         }
       },
       {
         '@type': 'Question',
-        name: 'What ROI can wearable safety technology deliver?',
+        name: 'How often do you conduct health screenings?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Real-world deployments show significant returns: one study found 54% lower OSHA recordables and 88% fewer lost workdays. Another warehouse study showed 62% of workers reduced risky movements by half, with total ergonomic hazards falling 39%.'
+          text: 'KAWEESA CHILDREN\'S MINISTRY conducts regular health screening programs throughout the year, reaching different communities on a rotating basis to ensure consistent healthcare access for children in need.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Do insurance companies support wearable safety technology?',
+        name: 'Is the health screening program free?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, many insurers now bundle wearable device costs into workers compensation premiums. Employers keep the hardware as long as usage stays high because fewer claims leave insurers ahead financially. Regional carriers are expanding similar rebate schemes.'
+          text: 'Yes, our health screening programs are provided free of charge to families and children in need. This is part of our mission to ensure every child has access to basic healthcare regardless of their family\'s financial situation.'
         }
       }
     ]
@@ -211,12 +212,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="WRLDS Technologies" />
+      <meta property="og:site_name" content="KAWEESA CHILDREN'S MINISTRY LIMITED" />
       <meta property="og:locale" content="en_US" />
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {isBlogPost && <meta property="article:publisher" content="https://wrlds.com" />}
+      {isBlogPost && <meta property="article:publisher" content="https://kaweesachildrensministry.org" />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -224,8 +225,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImageUrl} />
-      <meta name="twitter:site" content="@wrldstechnologies" />
-      <meta name="twitter:creator" content="@wrldstechnologies" />
       
       {/* LinkedIn specific */}
       <meta property="og:image:secure_url" content={absoluteImageUrl} />
@@ -236,8 +235,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="pinterest:image" content={absoluteImageUrl} />
       
       {/* Additional SEO meta tags */}
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="theme-color" content="#ea580c" />
+      <meta name="msapplication-TileColor" content="#ea580c" />
       
       {/* JSON-LD structured data */}
       <script type="application/ld+json">
@@ -250,15 +249,15 @@ const SEO: React.FC<SEOProps> = ({
         </script>
       )}
       
-      {smartPPEFAQData && (
+      {educationCenterFAQData && (
         <script type="application/ld+json">
-          {JSON.stringify(smartPPEFAQData)}
+          {JSON.stringify(educationCenterFAQData)}
         </script>
       )}
       
-      {wearableSafetyROIFAQData && (
+      {healthScreeningFAQData && (
         <script type="application/ld+json">
-          {JSON.stringify(wearableSafetyROIFAQData)}
+          {JSON.stringify(healthScreeningFAQData)}
         </script>
       )}
     </Helmet>
