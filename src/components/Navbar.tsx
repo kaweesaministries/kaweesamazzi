@@ -183,7 +183,13 @@ const Navbar = () => {
             {/* Donate Button */}
             <Button 
               onClick={handleDonateClick}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 font-medium"
+              variant="glass"
+              className={cn(
+                "px-4 py-2 font-medium",
+                isScrolled 
+                  ? "bg-orange-500/20 border-orange-500/30 text-orange-600 hover:bg-orange-500/30 hover:shadow-orange-500/20" 
+                  : "bg-white/10 border-white/20 text-white hover:bg-white/20 hover:shadow-white/10"
+              )}
             >
               Donate Now
               <ExternalLink className="ml-2 h-4 w-4" />
