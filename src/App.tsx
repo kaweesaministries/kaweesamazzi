@@ -15,6 +15,12 @@ import Volunteer from "./pages/Volunteer";
 import Impact from "./pages/Impact";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Programs from "./pages/Programs";
+import SponsorChild from "./pages/SponsorChild";
+import Events from "./pages/Events";
+import Partners from "./pages/Partners";
+import Resources from "./pages/Resources";
+import Testimonials from "./pages/Testimonials";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -28,11 +34,17 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Programs />} />
             <Route path="/news" element={<News />} />
             <Route path="/news/:slug" element={<NewsDetail />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/sponsor-child" element={<SponsorChild />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
