@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, MapPin, BookOpen, Home } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,13 +5,13 @@ import { Card, CardContent } from "@/components/ui/card";
 const QuickImpactStats = () => {
   const stats = [
     {
-      number: "500+",
+      number: "60+",
       label: "Children Supported",
       icon: <Users className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
-      number: "15",
+      number: "4",
       label: "Communities Served",
       icon: <MapPin className="w-6 h-6" />,
       color: "bg-green-100 text-green-600"
@@ -24,7 +23,7 @@ const QuickImpactStats = () => {
       color: "bg-orange-100 text-orange-600"
     },
     {
-      number: "200+",
+      number: "40+",
       label: "Families Empowered",
       icon: <Home className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600"
