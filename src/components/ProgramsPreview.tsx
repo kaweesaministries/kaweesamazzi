@@ -21,7 +21,7 @@ const ProgramsPreview = () => {
       icon: <Heart className="w-6 h-6" />,
       color: "bg-red-100 text-red-600",
       served: "45+ children",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0060.jpg?raw=true",
+      image: "/lovable-uploads/5f2a0b08-6176-4c6a-9b43-f1897db8d0cf.png",
       activities: ["Health Screenings", "Nutrition Programs", "Health Education"]
     },
     {
