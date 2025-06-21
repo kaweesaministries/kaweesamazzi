@@ -16,7 +16,7 @@ const Programs = () => {
       icon: <BookOpen className="w-8 h-8" />,
       color: "bg-blue-100 text-blue-600",
       benefits: ["School fees coverage", "Learning materials", "Uniforms and supplies", "After-school tutoring"],
-      served: "500+ children"
+      served: "30+ children"
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Programs = () => {
       icon: <Heart className="w-8 h-8" />,
       color: "bg-red-100 text-red-600",
       benefits: ["Regular health checkups", "Nutritious daily meals", "Vaccination programs", "Health education"],
-      served: "800+ children"
+      served: "45+ children"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Programs = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "bg-green-100 text-green-600",
       benefits: ["Safe shelter programs", "Counseling services", "Legal protection", "Emergency response"],
-      served: "200+ children"
+      served: "15+ children"
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const Programs = () => {
       icon: <Users className="w-8 h-8" />,
       color: "bg-purple-100 text-purple-600",
       benefits: ["Skills training", "Microfinance loans", "Parenting support", "Income generation"],
-      served: "300+ families"
+      served: "25+ families"
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ const Programs = () => {
       icon: <Utensils className="w-8 h-8" />,
       color: "bg-orange-100 text-orange-600",
       benefits: ["Emergency food aid", "Temporary shelter", "Medical emergency support", "Crisis intervention"],
-      served: "150+ families"
+      served: "20+ families"
     },
     {
       id: 6,
@@ -61,7 +61,7 @@ const Programs = () => {
       icon: <Briefcase className="w-8 h-8" />,
       color: "bg-indigo-100 text-indigo-600",
       benefits: ["Technical skills training", "Business mentorship", "Job placement support", "Entrepreneurship guidance"],
-      served: "100+ youth"
+      served: "12+ youth"
     }
   ];
 

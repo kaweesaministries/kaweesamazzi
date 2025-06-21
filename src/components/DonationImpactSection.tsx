@@ -8,26 +8,26 @@ import { Link } from "react-router-dom";
 const DonationImpactSection = () => {
   const donationTiers = [
     {
-      amount: "$25",
-      impact: "Provides school supplies for 2 children for a month",
+      amount: "$10",
+      impact: "Provides school supplies for 1 child for 2 months",
       icon: <BookOpen className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
-      amount: "$50",
-      impact: "Feeds 5 children nutritious meals for a week",
+      amount: "$25",
+      impact: "Feeds 3 children nutritious meals for a week",
       icon: <Heart className="w-6 h-6" />,
       color: "bg-red-100 text-red-600"
     },
     {
-      amount: "$100",
-      impact: "Covers healthcare costs for 1 child for 3 months",
+      amount: "$50",
+      impact: "Covers basic healthcare for 1 child for 2 months",
       icon: <Users className="w-6 h-6" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      amount: "$200",
-      impact: "Supports a family with skills training and microfinance",
+      amount: "$100",
+      impact: "Supports a family with skills training for 1 month",
       icon: <Home className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600"
     }

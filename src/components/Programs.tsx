@@ -76,15 +76,15 @@ const Programs = () => {
           <h3 className="text-2xl font-bold mb-4">Making a Real Difference</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <div className="text-3xl font-bold mb-2">500+</div>
+              <div className="text-3xl font-bold mb-2">60+</div>
               <div className="text-orange-100">Children Supported</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">50+</div>
+              <div className="text-3xl font-bold mb-2">4</div>
               <div className="text-orange-100">Communities Reached</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">10+</div>
+              <div className="text-3xl font-bold mb-2">5+</div>
               <div className="text-orange-100">Years of Service</div>
             </div>
           </div>
