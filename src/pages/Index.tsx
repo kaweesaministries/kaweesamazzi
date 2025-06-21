@@ -1,6 +1,7 @@
 
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
+import PhotoGallery from '@/components/PhotoGallery';
 import QuickImpactStats from '@/components/QuickImpactStats';
 import AboutMinistry from '@/components/AboutMinistry';
 import LeadershipPreview from '@/components/LeadershipPreview';
@@ -9,7 +10,6 @@ import PartnershipShowcase from '@/components/PartnershipShowcase';
 import ImpactStories from '@/components/ImpactStories';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import TransformationShowcase from '@/components/TransformationShowcase';
-import PhotoGallery from '@/components/PhotoGallery';
 import HowToHelp from '@/components/HowToHelp';
 import VolunteerOpportunitiesPreview from '@/components/VolunteerOpportunitiesPreview';
 import DonationImpactSection from '@/components/DonationImpactSection';
@@ -37,6 +37,7 @@ const Index = () => {
         keywords={['children ministry', 'Uganda foundation', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
       />
       <Hero />
+      <PhotoGallery />
       <QuickImpactStats />
       <AboutMinistry />
       <LeadershipPreview />
@@ -44,7 +45,6 @@ const Index = () => {
       <PartnershipShowcase />
       <ImpactStories />
       <TransformationShowcase />
-      <PhotoGallery />
       <TestimonialsCarousel />
       <HowToHelp />
       <VolunteerOpportunitiesPreview />
