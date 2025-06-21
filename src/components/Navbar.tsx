@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
@@ -42,7 +43,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              
+              <span className={cn(
+                "text-lg sm:text-xl font-bold transition-colors duration-300",
+                isScrolled ? "text-gray-900" : "text-white"
+              )}>
+                KAWEESA CHILDREN'S MINISTRIES
+              </span>
             </Link>
           </div>
           
