@@ -13,7 +13,7 @@ const ProgramsPreview = () => {
       icon: <BookOpen className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600",
       served: "500+ children",
-      image: "/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png",
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0062.jpg?raw=true",
       activities: ["Scholarships", "School Supplies", "Tutoring Programs"]
     },
     {
@@ -22,7 +22,7 @@ const ProgramsPreview = () => {
       icon: <Heart className="w-6 h-6" />,
       color: "bg-red-100 text-red-600",
       served: "800+ children",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png",
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0060.jpg?raw=true",
       activities: ["Mobile Clinics", "Nutrition Programs", "Health Education"]
     },
     {
@@ -31,7 +31,7 @@ const ProgramsPreview = () => {
       icon: <Shield className="w-6 h-6" />,
       color: "bg-green-100 text-green-600",
       served: "200+ children",
-      image: "/lovable-uploads/078a129e-0f98-4d91-af61-873687db1a04.png",
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0066.jpg?raw=true",
       activities: ["Safe Spaces", "Counseling", "Legal Support"]
     },
     {
@@ -40,7 +40,7 @@ const ProgramsPreview = () => {
       icon: <Users className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600",
       served: "300+ families",
-      image: "/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png",
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0170.jpg?raw=true",
       activities: ["Skills Training", "Microfinance", "Business Support"]
     }
   ];

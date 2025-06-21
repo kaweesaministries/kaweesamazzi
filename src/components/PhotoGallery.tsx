@@ -22,51 +22,107 @@ const PhotoGallery = () => {
   const images: GalleryImage[] = [
     {
       id: '1',
-      src: '/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png',
-      alt: 'Children in classroom',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0062.jpg?raw=true',
+      alt: 'Children receiving educational support',
       title: 'Education Program',
-      description: 'Students participating in our literacy program',
+      description: 'Students participating in our literacy and education support program',
       category: 'education'
     },
     {
       id: '2',
-      src: '/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png',
-      alt: 'Community health outreach',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0060.jpg?raw=true',
+      alt: 'Community health and nutrition program',
       title: 'Health & Nutrition',
-      description: 'Mobile health clinic serving rural communities',
+      description: 'Providing essential healthcare and nutrition support to children',
       category: 'health'
     },
     {
       id: '3',
-      src: '/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
-      alt: 'Skills training workshop',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0058.jpg?raw=true',
+      alt: 'Family empowerment activities',
       title: 'Family Empowerment',
-      description: 'Parents learning vocational skills',
+      description: 'Supporting families through skills training and development programs',
       category: 'empowerment'
     },
     {
       id: '4',
-      src: '/lovable-uploads/078a129e-0f98-4d91-af61-873687db1a04.png',
-      alt: 'Safe playground',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0057.jpg?raw=true',
+      alt: 'Safe spaces for children',
       title: 'Child Protection',
-      description: 'Safe spaces for children to play and learn',
+      description: 'Creating safe environments where children can learn and play',
       category: 'protection'
     },
     {
       id: '5',
-      src: '/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png',
-      alt: 'Community gathering',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0053.jpg?raw=true',
+      alt: 'Community gathering and events',
       title: 'Community Events',
-      description: 'Bringing families together for support',
+      description: 'Bringing families and communities together for support and celebration',
       category: 'community'
     },
     {
       id: '6',
-      src: '/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png',
-      alt: 'Volunteer activities',
-      title: 'Volunteer Program',
-      description: 'Local and international volunteers making a difference',
-      category: 'volunteers'
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0161.jpg?raw=true',
+      alt: 'Educational activities and learning',
+      title: 'Learning Activities',
+      description: 'Interactive learning sessions helping children develop essential skills',
+      category: 'education'
+    },
+    {
+      id: '7',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0163.jpg?raw=true',
+      alt: 'Community outreach programs',
+      title: 'Community Outreach',
+      description: 'Reaching out to communities with essential services and support',
+      category: 'community'
+    },
+    {
+      id: '8',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0164.jpg?raw=true',
+      alt: 'Children participating in programs',
+      title: 'Program Participation',
+      description: 'Active participation of children in our development programs',
+      category: 'education'
+    },
+    {
+      id: '9',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0168.jpg?raw=true',
+      alt: 'Health and wellness activities',
+      title: 'Health & Wellness',
+      description: 'Promoting health and wellness through various community programs',
+      category: 'health'
+    },
+    {
+      id: '10',
+      src: 'https://github.com/drewversedesign/kaweesta-ministries/blob/main/IMG-20250518-WA0170.jpg?raw=true',
+      alt: 'Skills development training',
+      title: 'Skills Development',
+      description: 'Providing practical skills training for sustainable livelihoods',
+      category: 'empowerment'
+    },
+    {
+      id: '11',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0172.jpg?raw=true',
+      alt: 'Community support initiatives',
+      title: 'Community Support',
+      description: 'Collaborative efforts to strengthen community bonds and support systems',
+      category: 'community'
+    },
+    {
+      id: '12',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0066.jpg?raw=true',
+      alt: 'Child protection and care',
+      title: 'Child Care & Protection',
+      description: 'Ensuring every child receives proper care and protection',
+      category: 'protection'
+    },
+    {
+      id: '13',
+      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0064.jpg?raw=true',
+      alt: 'Educational support and mentoring',
+      title: 'Educational Mentoring',
+      description: 'One-on-one mentoring and educational support for children',
+      category: 'education'
     }
   ];
 
@@ -76,8 +132,7 @@ const PhotoGallery = () => {
     { key: 'health', label: 'Health' },
     { key: 'empowerment', label: 'Empowerment' },
     { key: 'protection', label: 'Protection' },
-    { key: 'community', label: 'Community' },
-    { key: 'volunteers', label: 'Volunteers' }
+    { key: 'community', label: 'Community' }
   ];
 
   const filteredImages = filter === 'all' 

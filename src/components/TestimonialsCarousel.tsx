@@ -10,25 +10,25 @@ const TestimonialsCarousel = () => {
       name: "Sarah Nakato",
       role: "Beneficiary Parent",
       content: "KAWEESA has transformed my daughter's life. She now excels in school and dreams of becoming a doctor. Thank you for giving her hope.",
-      image: "/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png"
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0064.jpg?raw=true"
     },
     {
       name: "David Ssemwanga",
       role: "Community Volunteer",
       content: "Working with KAWEESA has been incredibly rewarding. Seeing children's faces light up when they receive support is priceless.",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0163.jpg?raw=true"
     },
     {
       name: "Mary Namugga",
       role: "Sponsor",
       content: "Sponsoring a child through KAWEESA has been one of the most meaningful decisions I've made. The regular updates show real impact.",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0161.jpg?raw=true"
     },
     {
       name: "James Mukasa",
       role: "Former Beneficiary",
       content: "KAWEESA gave me a second chance at life. Now I'm in university studying to become a teacher to help other children like me.",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0172.jpg?raw=true"
     }
   ];
 

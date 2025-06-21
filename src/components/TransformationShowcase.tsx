@@ -6,30 +6,30 @@ import { ArrowRight, Heart, Star } from 'lucide-react';
 const TransformationShowcase = () => {
   const transformations = [
     {
-      name: "Sarah's Education Journey",
-      beforeImage: '/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
-      afterImage: '/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png',
-      beforeText: "Struggling with basic reading",
-      afterText: "Top student in her class",
-      story: "Through our education support program, Sarah went from barely reading to becoming a star student who now tutors other children.",
+      name: "Educational Journey Success",
+      beforeImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0057.jpg?raw=true',
+      afterImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0062.jpg?raw=true',
+      beforeText: "Struggling with basic literacy",
+      afterText: "Excelling in academic programs",
+      story: "Through our education support program, children who once struggled with basic reading are now thriving academically and inspiring others.",
       timeframe: "2 years"
     },
     {
-      name: "Community Health Impact",
-      beforeImage: '/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png',
-      afterImage: '/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png',
+      name: "Community Health Transformation",
+      beforeImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0058.jpg?raw=true',
+      afterImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0168.jpg?raw=true',
       beforeText: "Limited healthcare access",
       afterText: "Thriving healthy community",
-      story: "Our mobile health clinics transformed this community's access to healthcare, reducing child mortality by 60%.",
+      story: "Our comprehensive health programs have transformed community wellness, providing essential healthcare and nutrition support to families.",
       timeframe: "3 years"
     },
     {
       name: "Family Empowerment Success",
-      beforeImage: '/lovable-uploads/078a129e-0f98-4d91-af61-873687db1a04.png',
-      afterImage: '/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png',
-      beforeText: "Family struggling with poverty",
-      afterText: "Successful small business owners",
-      story: "Through skills training and microfinance, this family now runs a successful tailoring business and supports their community.",
+      beforeImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0053.jpg?raw=true',
+      afterImage: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0170.jpg?raw=true',
+      beforeText: "Families facing economic hardship",
+      afterText: "Self-sufficient community leaders",
+      story: "Through skills training and empowerment programs, families have developed sustainable livelihoods and become community leaders.",
       timeframe: "18 months"
     }
   ];
