@@ -30,7 +30,8 @@ const FloatingDonateButton = () => {
   return (
     <Button
       onClick={handleDonateClick}
-      className="fixed bottom-6 right-6 z-50 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-4 py-3 shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+      variant="glass-orange"
+      className="fixed bottom-6 right-6 z-50 rounded-full px-4 py-3 liquid-depth liquid-focus"
       aria-label="Donate Now"
     >
       <Heart className="h-5 w-5" />
