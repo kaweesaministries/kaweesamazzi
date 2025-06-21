@@ -15,7 +15,7 @@ const NewsPreview = () => {
       author: 'Ministry Team',
       category: 'Education',
       slug: 'new-education-center-kampala',
-      imageUrl: '/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png'
+      imageUrl: '/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png'
     },
     {
       id: '2', 
@@ -25,7 +25,7 @@ const NewsPreview = () => {
       author: 'Health Team',
       category: 'Health',
       slug: 'health-screening-500-children',
-      imageUrl: '/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png'
+      imageUrl: '/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png'
     },
     {
       id: '3',
@@ -35,7 +35,7 @@ const NewsPreview = () => {
       author: 'Partnership Team',
       category: 'Partnerships',
       slug: 'partnership-local-schools',
-      imageUrl: '/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png'
+      imageUrl: '/lovable-uploads/39605e90-8478-4fee-b1b9-cee41df66f10.png'
     }
   ];
 
