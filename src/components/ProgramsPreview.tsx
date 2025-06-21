@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { BookOpen, Heart, Shield, Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,7 +12,7 @@ const ProgramsPreview = () => {
       icon: <BookOpen className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600",
       served: "30+ children",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0062.jpg?raw=true",
+      image: "/lovable-uploads/27147af8-7d65-44dd-a212-5ab5d61073c9.png",
       activities: ["Scholarships", "School Supplies", "Tutoring Programs"]
     },
     {
