@@ -1,3 +1,4 @@
+
 import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
@@ -60,7 +61,7 @@ const Hero = () => {
       <div className="banner-container bg-black relative overflow-hidden h-[60vh] sm:h-[70vh] md:h-[750px] w-full">
         <div className="absolute inset-0 bg-black w-full">
           <img src="/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png" alt="Young caregiver and child smiling together - representing our ministry's mission" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-white"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/60"></div>
         </div>
         
         <div className="banner-overlay bg-transparent pt-16 sm:pt-20 md:pt-24 w-full">
