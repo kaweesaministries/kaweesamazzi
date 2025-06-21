@@ -31,12 +31,54 @@ const PartnershipShowcase = () => {
   ];
 
   const featuredPartners = [
-    "World Vision International",
-    "UNICEF Uganda", 
-    "Save the Children UK",
-    "Uganda Development Bank",
-    "Watoto Church",
-    "Kampala International School"
+    {
+      name: "World Vision International",
+      logo: "/lovable-uploads/39605e90-8478-4fee-b1b9-cee41df66f10.png",
+      partnership: "Education & Health Programs"
+    },
+    {
+      name: "UNICEF Uganda", 
+      logo: "/lovable-uploads/48e540e5-6a25-44e4-b3f7-80f3bfc2777a.png",
+      partnership: "Child Protection Initiative"
+    },
+    {
+      name: "Save the Children UK",
+      logo: "/lovable-uploads/5262afdb-dd24-4d5e-be66-7c6717adbca9.png",
+      partnership: "Emergency Response"
+    },
+    {
+      name: "Uganda Development Bank",
+      logo: "/lovable-uploads/6739bd63-bf19-4abd-bb23-0b613bbf7ac8.png",
+      partnership: "Microfinance Program"
+    },
+    {
+      name: "Watoto Church",
+      logo: "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png",
+      partnership: "Community Outreach"
+    },
+    {
+      name: "Kampala International School",
+      logo: "/lovable-uploads/700e27d7-0513-4bfa-8ac4-f7fd6087594c.png",
+      partnership: "Educational Support"
+    }
+  ];
+
+  const collaborationImages = [
+    {
+      src: "/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png",
+      alt: "Partnership meeting with community leaders",
+      title: "Community Collaboration"
+    },
+    {
+      src: "/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png",
+      alt: "Joint program implementation",
+      title: "Program Implementation"
+    },
+    {
+      src: "/lovable-uploads/078a129e-0f98-4d91-af61-873687db1a04.png",
+      alt: "Training workshop with partners",
+      title: "Capacity Building"
+    }
   ];
 
   return (
@@ -54,7 +96,7 @@ const PartnershipShowcase = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {partnerCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -76,21 +118,62 @@ const PartnershipShowcase = () => {
           ))}
         </div>
 
+        {/* Featured Partners with Logos */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white rounded-2xl p-8 mb-8"
+          className="bg-white rounded-2xl p-8 mb-12 shadow-sm"
         >
-          <h3 className="text-xl font-bold text-center mb-6">Featured Partners</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+          <h3 className="text-xl font-bold text-center mb-8">Featured Partners</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {featuredPartners.map((partner, index) => (
               <div 
                 key={index}
-                className="p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className="group text-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="text-sm font-medium text-gray-700">{partner}</span>
+                <div className="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`}
+                    className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-200"
+                  />
+                </div>
+                <h4 className="text-sm font-medium text-gray-900 mb-1">{partner.name}</h4>
+                <p className="text-xs text-gray-500">{partner.partnership}</p>
               </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Collaboration in Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-8"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Partnerships in Action</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {collaborationImages.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                className="relative group overflow-hidden rounded-xl"
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="p-4 text-white">
+                    <h4 className="font-semibold">{image.title}</h4>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

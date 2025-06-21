@@ -32,8 +32,22 @@ const QuickImpactStats = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 relative overflow-hidden">
+      {/* Background with subtle pattern */}
+      <div className="absolute inset-0 bg-gray-50">
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `url('/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-50/90 to-gray-50/90" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +68,7 @@ const QuickImpactStats = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-white/50">
                 <CardContent className="p-4 lg:p-6">
                   <div className={`w-12 h-12 ${stat.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
                     {stat.icon}

@@ -8,6 +8,8 @@ import ProgramsPreview from '@/components/ProgramsPreview';
 import PartnershipShowcase from '@/components/PartnershipShowcase';
 import ImpactStories from '@/components/ImpactStories';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import TransformationShowcase from '@/components/TransformationShowcase';
+import PhotoGallery from '@/components/PhotoGallery';
 import HowToHelp from '@/components/HowToHelp';
 import VolunteerOpportunitiesPreview from '@/components/VolunteerOpportunitiesPreview';
 import DonationImpactSection from '@/components/DonationImpactSection';
@@ -41,6 +43,8 @@ const Index = () => {
       <ProgramsPreview />
       <PartnershipShowcase />
       <ImpactStories />
+      <TransformationShowcase />
+      <PhotoGallery />
       <TestimonialsCarousel />
       <HowToHelp />
       <VolunteerOpportunitiesPreview />
