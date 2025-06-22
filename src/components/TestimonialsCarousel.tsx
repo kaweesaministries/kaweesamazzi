@@ -33,7 +33,7 @@ const TestimonialsCarousel = () => {
       name: "Aneni Joan",
       role: "10 years old",
       content: "I'm Aneni Joan. I was very sick and had no help after my parents died. Now, I am happy because Kaweesa Children's Ministries Limited supports me. I eat, learn, and play with friends. I want to be a doctor. Thank you for loving children like me.",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "/lovable-uploads/9d319820-ff2f-46c4-a479-1cf89731bb0d.png"
     },
     {
       name: "Ronald",
