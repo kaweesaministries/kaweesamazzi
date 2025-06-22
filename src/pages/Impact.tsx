@@ -1,5 +1,6 @@
+
 import PageLayout from '@/components/PageLayout';
-import { ArrowLeft, Users, BookOpen, Heart, Home, TrendingUp, MapPin } from 'lucide-react';
+import { ArrowLeft, Users, BookOpen, Heart, Home, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
@@ -113,33 +114,6 @@ const Impact = () => {
                 </motion.div>
               ))}
             </div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center mb-16"
-            >
-              <TrendingUp className="w-16 h-16 mx-auto mb-4" />
-              <h2 className="text-3xl font-bold mb-4">Growing Impact</h2>
-              <p className="text-xl mb-6 text-orange-100">
-                Since our founding, we've seen incredible growth in our ability to serve children and families.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <div className="text-3xl font-bold mb-2">300%</div>
-                  <div className="text-orange-100">Growth in 5 Years</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold mb-2">12</div>
-                  <div className="text-orange-100">Active Programs</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold mb-2">50+</div>
-                  <div className="text-orange-100">Volunteers</div>
-                </div>
-              </div>
-            </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
