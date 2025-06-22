@@ -1,11 +1,9 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from "@/components/ui/card";
-import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 const About = () => {
   useEffect(() => {
