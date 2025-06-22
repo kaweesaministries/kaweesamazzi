@@ -34,30 +34,6 @@ const Testimonials = () => {
     }
   ];
 
-  const sponsorTestimonials = [
-    {
-      name: "Jennifer Smith",
-      location: "London, UK",
-      relationship: "Child Sponsor",
-      testimonial: "Sponsoring little Grace has been the most rewarding experience of my life. Seeing her progress through her letters and photos brings me so much joy. She's like a daughter to me now.",
-      duration: "3 years sponsor"
-    },
-    {
-      name: "Robert Johnson",
-      location: "Toronto, Canada",
-      relationship: "Monthly Donor",
-      testimonial: "The transparency and impact reports from KAWEESA give me complete confidence in their work. Every dollar truly makes a difference in these children's lives.",
-      duration: "5 years supporter"
-    },
-    {
-      name: "Maria Rodriguez",
-      location: "Madrid, Spain",
-      relationship: "Corporate Partner",
-      testimonial: "Our company has partnered with KAWEESA for two years. Their professionalism and genuine care for children make them an exceptional organization to work with.",
-      duration: "Corporate partner"
-    }
-  ];
-
   const volunteerStories = [
     {
       name: "David Mukasa",
@@ -154,30 +130,6 @@ const Testimonials = () => {
                   </CardContent>
                 </Card>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Sponsor & Donor Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sponsorTestimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-blue-50 border-blue-200">
-                <CardContent className="p-0">
-                  <Quote className="w-8 h-8 text-blue-500 mb-4" />
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.testimonial}"</p>
-                  <div className="border-t border-blue-200 pt-4">
-                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
-                    <p className="text-xs text-blue-600 font-medium">{testimonial.relationship} • {testimonial.duration}</p>
-                  </div>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </motion.div>
