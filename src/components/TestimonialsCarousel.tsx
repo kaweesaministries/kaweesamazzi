@@ -7,28 +7,40 @@ import { Quote } from "lucide-react";
 const TestimonialsCarousel = () => {
   const testimonials = [
     {
-      name: "Sarah Nakato",
-      role: "Beneficiary Parent",
-      content: "KAWEESA has transformed my daughter's life. She now excels in school and dreams of becoming a doctor. Thank you for giving her hope.",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0064.jpg?raw=true"
+      name: "Racheal",
+      role: "10 years old",
+      content: "My name is Racheal. I live with my auntie because my mummy and daddy died. Before, I didn't go to school and we didn't have enough food. Now, Kaweesa Children's Ministries Limited gives me food and pays my school fees. I love drawing and I want to be an artist. Thank you for helping me.",
+      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
     },
     {
-      name: "David Ssemwanga",
-      role: "Community Volunteer",
-      content: "Working with KAWEESA has been incredibly rewarding. Seeing children's faces light up when they receive support is priceless.",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0163.jpg?raw=true"
+      name: "Tom",
+      role: "8 years old",
+      content: "I am Tom. I was left alone when my family died. I used to cry a lot. Now I live with a good uncle, and Kaweesa Children's Ministries Limited helps us. I go to school, I eat every day, and I play football with friends. I want to be a teacher one day. Thank you for making me smile again.",
+      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     },
     {
-      name: "Mary Namugga",
-      role: "Sponsor",
-      content: "Sponsoring a child through KAWEESA has been one of the most meaningful decisions I've made. The regular updates show real impact.",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0161.jpg?raw=true"
+      name: "Devine",
+      role: "11 years old",
+      content: "My name is Devine. I lost my whole family and nobody wanted me. I felt very sad. Then a kind auntie took me in. I now go to school and have books and food because of Kaweesa Children's Ministries Limited. I want to become a nurse to help others like me.",
+      image: "/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png"
     },
     {
-      name: "James Mukasa",
-      role: "Former Beneficiary",
-      content: "KAWEESA gave me a second chance at life. Now I'm in university studying to become a teacher to help other children like me.",
-      image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0172.jpg?raw=true"
+      name: "Oliver",
+      role: "9 years old",
+      content: "My name is Oliver. My mummy died and I had no one. My stepmother died too. I now live with a good lady who takes care of me. Kaweesa Children's Ministries Limited gives me school things and clothes. I like singing and I want to be a lawyer. Thank you for helping me learn.",
+      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
+    },
+    {
+      name: "Aneni Joan",
+      role: "10 years old",
+      content: "I'm Aneni Joan. I was very sick and had no help after my parents died. Now, I am happy because Kaweesa Children's Ministries Limited supports me. I eat, learn, and play with friends. I want to be a doctor. Thank you for loving children like me.",
+      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+    },
+    {
+      name: "Ronald",
+      role: "10 years old",
+      content: "My name is Ronald. I didn't have food and school after my parents died. I felt lost. But now, I live with my grandma and Kaweesa Children's Ministries Limited helps us. I want to be a footballer and make her proud. Thank you for giving me hope.",
+      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     }
   ];
 
@@ -43,7 +55,7 @@ const TestimonialsCarousel = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Voices of Hope</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from the children, families, and supporters whose lives have been touched by our ministry
+            Hear directly from the children whose lives have been transformed through our ministry's love and support
           </p>
         </motion.div>
         
