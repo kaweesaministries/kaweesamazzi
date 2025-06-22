@@ -43,7 +43,7 @@ const PhotoGallery = () => {
     },
     {
       id: '5',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0053.jpg?raw=true',
+      src: '/lovable-uploads/e7abe70b-9515-4ba1-8fcd-1a59b534f5c3.png',
       alt: 'Community gathering and events',
       title: 'Community Events',
       description: 'Bringing families and communities together for support and celebration',
