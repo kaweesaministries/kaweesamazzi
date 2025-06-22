@@ -1,10 +1,10 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from "@/components/ui/card";
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 const About = () => {
   useEffect(() => {
@@ -114,6 +114,15 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mb-16"
               >
+                <TestimonialsCarousel />
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="mb-16"
+              >
                 <h2 className="text-3xl font-bold mb-6">Registration Details</h2>
                 <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-8 border border-orange-200 text-center">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Official Registration Information</h3>
@@ -132,7 +141,7 @@ const About = () => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
                 className="mb-16"
               >
                 <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
