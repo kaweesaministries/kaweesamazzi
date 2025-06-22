@@ -1,12 +1,17 @@
-
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, Download, BookOpen, BarChart3, Shield, Users } from 'lucide-react';
+import { FileText, MessageCircle, BookOpen, BarChart3, Shield, Users } from 'lucide-react';
 import { motion } from "framer-motion";
 import SEO from '@/components/SEO';
 
 const Resources = () => {
+  const handleWhatsAppRequest = (documentName: string) => {
+    const message = `Hello, I would like to request ${documentName} from Kaweesa Children's Ministry.`;
+    const whatsappUrl = `https://wa.me/+256772477774?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const annualReports = [
     {
       year: "2023",
@@ -164,9 +169,12 @@ const Resources = () => {
                       <span>{report.pages}</span>
                       <span>{report.size}</span>
                     </div>
-                    <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download Report
+                    <Button 
+                      className="w-full bg-blue-500 hover:bg-blue-600"
+                      onClick={() => handleWhatsAppRequest(report.title)}
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Request
                     </Button>
                   </CardContent>
                 </Card>
@@ -201,9 +209,13 @@ const Resources = () => {
                   <p className="text-gray-600 text-sm mb-4">{resource.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-xs text-gray-500">{resource.size}</span>
-                    <Button size="sm" variant="outline">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
+                    <Button 
+                      size="sm" 
+                      variant="outline"
+                      onClick={() => handleWhatsAppRequest(resource.title)}
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Request
                     </Button>
                   </div>
                 </CardContent>
@@ -235,9 +247,13 @@ const Resources = () => {
                     <span>{report.period}</span>
                     <span>{report.size}</span>
                   </div>
-                  <Button size="sm" className="w-full bg-orange-500 hover:bg-orange-600">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download
+                  <Button 
+                    size="sm" 
+                    className="w-full bg-orange-500 hover:bg-orange-600"
+                    onClick={() => handleWhatsAppRequest(report.title)}
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Request
                   </Button>
                 </CardContent>
               </Card>
@@ -273,9 +289,14 @@ const Resources = () => {
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-gray-900">{policy.title}</h3>
                   <p className="text-gray-600 text-sm mb-4">{policy.description}</p>
-                  <Button size="sm" variant="outline" className="w-full">
-                    <FileText className="w-4 h-4 mr-2" />
-                    View Policy
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => handleWhatsAppRequest(policy.title)}
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Request
                   </Button>
                 </CardContent>
               </Card>
