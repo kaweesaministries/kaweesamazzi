@@ -27,10 +27,10 @@ const PhotoGallery = () => {
     },
     {
       id: '3',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0058.jpg?raw=true',
-      alt: 'Family empowerment activities',
+      src: '/lovable-uploads/81c61e84-d015-46ee-86f4-feb111e5bd7c.png',
+      alt: 'Community gathering and family empowerment activities',
       title: 'Family Empowerment',
-      description: 'Supporting families through skills training and development programs',
+      description: 'Supporting families through community engagement and development programs',
       category: 'empowerment'
     },
     {
