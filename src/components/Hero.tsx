@@ -1,5 +1,4 @@
 
-
 import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
@@ -127,4 +126,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
