@@ -21,7 +21,7 @@ const TestimonialsCarousel = () => {
       name: "Devine",
       role: "11 years old",
       content: "My name is Devine. I lost my whole family and nobody wanted me. I felt very sad. Then a kind auntie took me in. I now go to school and have books and food because of Kaweesa Children's Ministries Limited. I want to become a nurse to help others like me.",
-      image: "/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png"
+      image: "/lovable-uploads/4894e9c9-e72a-41b8-97f1-21cb157aceb5.png"
     },
     {
       name: "Oliver",
