@@ -39,7 +39,7 @@ const TestimonialsCarousel = () => {
       name: "Ronald",
       role: "10 years old",
       content: "My name is Ronald. I didn't have food and school after my parents died. I felt lost. But now, I live with my grandma and Kaweesa Children's Ministries Limited helps us. I want to be a footballer and make her proud. Thank you for giving me hope.",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
+      image: "/lovable-uploads/b49b6853-e71b-4f03-91e9-52b27412d0ea.png"
     }
   ];
 
