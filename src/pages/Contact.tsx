@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,7 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+256 700 123 456", "+256 750 987 654"],
+      details: ["+256 772 477 774"],
       color: "bg-blue-100 text-blue-600"
     },
     {
@@ -142,7 +141,7 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-green-600 mr-3" />
                       <div>
                         <h4 className="font-semibold text-green-900">Emergency Contact</h4>
-                        <p className="text-green-700 text-sm">+256 700 123 456</p>
+                        <p className="text-green-700 text-sm">+256 772 477 774</p>
                       </div>
                     </div>
                     <div className="flex items-center p-4 bg-orange-50 rounded-lg border border-orange-200">
