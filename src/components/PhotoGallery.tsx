@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PhotoFilters from './PhotoFilters';
@@ -67,7 +68,7 @@ const PhotoGallery = () => {
     },
     {
       id: '8',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0164.jpg?raw=true',
+      src: '/lovable-uploads/4a68a2b4-58ea-4e10-94fd-38c016081bd2.png',
       alt: 'Children participating in programs',
       title: 'Program Participation',
       description: 'Active participation of children in our development programs',
