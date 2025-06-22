@@ -5,24 +5,24 @@ import { Card, CardContent } from "@/components/ui/card";
 const ImpactStories = () => {
   const stories = [
     {
-      name: "Sarah Nakamya",
-      age: 16,
-      story: "Thanks to KAWEESA Children's Ministry, I received a scholarship that allowed me to continue my education. Now I'm in Senior 4 and dream of becoming a nurse to help other children in my community.",
-      program: "Education Support",
+      name: "Auntie Rose",
+      age: 11,
+      story: "Devine lost her whole family and was abandoned even by relatives. I opened my home to her, but I couldn't provide what she truly needed. The Mawanga Foundation filled in that gap — school fees, books, meals, and most importantly, love. She now smiles again.",
+      program: "Guardian of Devine",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     },
     {
-      name: "Michael Ssebunya",
-      age: 14,
-      story: "The feeding program helped me grow stronger and focus better in school. I used to be hungry all the time, but now I can concentrate on my studies and even help other students with their homework.",
-      program: "Nutrition Program",
+      name: "James",
+      age: 8,
+      story: "Tom was left all alone after his parents died. I found him wandering the streets and brought him home, though we have so little ourselves. The Foundation has been a lifeline. They've given Tom clothes, meals, and an education. I never thought someone would care for him like their own child.",
+      program: "Guardian of Tom",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     },
     {
-      name: "Grace Namutebi",
-      age: 12,
-      story: "When I felt unsafe at home, KAWEESA Children's Ministry helped protect me and found me a loving foster family. Now I feel safe and loved, and I'm doing well in school again.",
-      program: "Child Protection",
+      name: "Grace",
+      age: 10,
+      story: "When my sister and her husband passed away from COVID-19, I took in little Racheal with no idea how I would care for her. The support from Mawanga Children Foundation gave her not just food and schooling, but also hope. She now dreams of becoming an artist. I thank God every day for the people who stand with children like Racheal.",
+      program: "Guardian of Racheal",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     }
   ];
@@ -38,7 +38,7 @@ const ImpactStories = () => {
             Transforming Lives, One Child at a Time
           </h2>
           <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            Read the inspiring stories of children whose lives have been transformed through our programs. 
+            Read the inspiring stories of children, families, and supporters whose lives have been transformed through our programs. 
             These stories represent the hundreds of children we've been privileged to serve.
           </p>
         </div>
