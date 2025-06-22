@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -10,7 +9,7 @@ const TestimonialsCarousel = () => {
       name: "Racheal",
       role: "10 years old",
       content: "My name is Racheal. I live with my auntie because my mummy and daddy died. Before, I didn't go to school and we didn't have enough food. Now, Kaweesa Children's Ministries Limited gives me food and pays my school fees. I love drawing and I want to be an artist. Thank you for helping me.",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+      image: "/lovable-uploads/13b49069-af8e-4704-a066-67143479c138.png"
     },
     {
       name: "Tom",
