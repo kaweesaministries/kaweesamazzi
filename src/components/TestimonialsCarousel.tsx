@@ -27,7 +27,7 @@ const TestimonialsCarousel = () => {
       name: "Oliver",
       role: "9 years old",
       content: "My name is Oliver. My mummy died and I had no one. My stepmother died too. I now live with a good lady who takes care of me. Kaweesa Children's Ministries Limited gives me school things and clothes. I like singing and I want to be a lawyer. Thank you for helping me learn.",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
+      image: "/lovable-uploads/f4d8e2af-2c4a-47a6-9a69-fffc94009473.png"
     },
     {
       name: "Aneni Joan",
