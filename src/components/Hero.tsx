@@ -82,9 +82,9 @@ const Hero = () => {
                 
                 <button 
                   className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium"
-                  onClick={scrollToPrograms}
+                  onClick={scrollToContact}
                 >
-                  Our Programs
+                  Contact Us
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </motion.div>
