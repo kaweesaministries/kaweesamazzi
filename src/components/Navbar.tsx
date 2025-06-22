@@ -105,12 +105,6 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/sponsor-child" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Sponsor a Child</div>
-                          <p className="text-sm text-gray-500">Transform a child's life through sponsorship</p>
-                        </Link>
-                      </li>
-                      <li>
                         <Link to="/volunteer" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
                           <div className="font-medium">Volunteer</div>
                           <p className="text-sm text-gray-500">Join our team of dedicated volunteers</p>
@@ -196,10 +190,6 @@ const Navbar = () => {
           
           <Link to="/donate" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
             Donate
-          </Link>
-          
-          <Link to="/sponsor-child" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Sponsor a Child
           </Link>
           
           <Link to="/volunteer" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>

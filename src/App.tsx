@@ -15,7 +15,6 @@ import Impact from "./pages/Impact";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Programs from "./pages/Programs";
-import SponsorChild from "./pages/SponsorChild";
 import Resources from "./pages/Resources";
 import Testimonials from "./pages/Testimonials";
 
@@ -36,7 +35,6 @@ const App = () => {
             <Route path="/impact" element={<Impact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/volunteer" element={<Volunteer />} />
-            <Route path="/sponsor-child" element={<SponsorChild />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />
