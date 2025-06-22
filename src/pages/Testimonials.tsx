@@ -2,7 +2,7 @@
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Quote, Star, Heart, Users } from 'lucide-react';
+import { Quote, Star, Heart } from 'lucide-react';
 import { motion } from "framer-motion";
 import SEO from '@/components/SEO';
 
@@ -79,13 +79,6 @@ const Testimonials = () => {
     }
   ];
 
-  const impactStats = [
-    { number: "2,000+", label: "Children Supported", icon: <Users className="w-6 h-6" /> },
-    { number: "500+", label: "Families Empowered", icon: <Heart className="w-6 h-6" /> },
-    { number: "95%", label: "School Completion Rate", icon: <Star className="w-6 h-6" /> },
-    { number: "10", label: "Communities Served", icon: <Users className="w-6 h-6" /> }
-  ];
-
   return (
     <PageLayout>
       <SEO 
@@ -119,27 +112,10 @@ const Testimonials = () => {
       
       <div className="container mx-auto px-4 py-16">
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          {impactStats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 text-orange-600">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-        
-        <motion.div 
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Children's Success Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -186,7 +162,7 @@ const Testimonials = () => {
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Sponsor & Donor Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -210,7 +186,7 @@ const Testimonials = () => {
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Volunteer Experiences</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -234,7 +210,7 @@ const Testimonials = () => {
           className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-white text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
         >
           <Star className="w-16 h-16 mx-auto mb-4 text-yellow-200" />
           <h2 className="text-3xl font-bold mb-4">Be Part of Our Story</h2>
