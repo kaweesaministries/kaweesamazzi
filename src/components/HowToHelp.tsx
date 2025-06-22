@@ -1,3 +1,4 @@
+
 import { Heart, Users, Gift, HandHeart, Calendar, Megaphone, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -72,22 +73,22 @@ const HowToHelp = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-16">
           {ways.map((way, index) => (
             <Card key={index} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
-              <CardContent className="p-6 text-center">
-                <div className={`w-16 h-16 ${way.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <way.icon className="w-8 h-8" />
+              <CardContent className="p-3 md:p-6 text-center">
+                <div className={`w-12 h-12 md:w-16 md:h-16 ${way.color} rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4`}>
+                  <way.icon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{way.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{way.description}</p>
+                <h3 className="text-sm md:text-xl font-semibold mb-1 md:mb-3 text-gray-900">{way.title}</h3>
+                <p className="text-gray-600 mb-2 md:mb-4 leading-relaxed text-xs md:text-base line-clamp-3 md:line-clamp-none">{way.description}</p>
                 <button 
                   onClick={way.onClick || (() => {})}
-                  className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-sm flex items-center justify-center mx-auto"
+                  className="px-2 md:px-4 py-1 md:py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-xs md:text-sm flex items-center justify-center mx-auto"
                 >
                   {way.action}
                   {(way.title === "Monthly Sponsorship" || way.title === "One-Time Donation") && (
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <ExternalLink className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                   )}
                 </button>
               </CardContent>
