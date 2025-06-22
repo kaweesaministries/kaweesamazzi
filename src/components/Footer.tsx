@@ -1,3 +1,4 @@
+
 import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -5,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
 import { Button } from "@/components/ui/button";
 import DonationModal from "@/components/DonationModal";
+import { redirectToWhatsApp } from "@/utils/whatsappHelper";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -86,14 +88,20 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 mr-3 text-orange-400" />
                   <span>Kampala, Uganda</span>
                 </div>
-                <div className="flex items-center">
+                <button 
+                  onClick={() => redirectToWhatsApp("general")}
+                  className="flex items-center hover:text-orange-400 transition-colors"
+                >
                   <Mail className="w-5 h-5 mr-3 text-orange-400" />
                   <span>info@kaweesaministry.org</span>
-                </div>
-                <div className="flex items-center">
+                </button>
+                <button 
+                  onClick={() => redirectToWhatsApp("general")}
+                  className="flex items-center hover:text-orange-400 transition-colors"
+                >
                   <Phone className="w-5 h-5 mr-3 text-orange-400" />
                   <span>+256 772 477 774</span>
-                </div>
+                </button>
               </div>
             </div>
             
@@ -101,9 +109,30 @@ const Footer = () => {
               <h3 className="text-lg font-bold mb-4 text-white">Get Involved</h3>
               <ul className="space-y-3 mb-6">
                 <li><Link to="/donate" className="text-gray-300 hover:text-orange-400 transition-colors">Make a Donation</Link></li>
-                <li><Link to="/sponsor-child" className="text-gray-300 hover:text-orange-400 transition-colors">Sponsor a Child</Link></li>
-                <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400 transition-colors">Volunteer</Link></li>
-                <li><Link to="/events" className="text-gray-300 hover:text-orange-400 transition-colors">Upcoming Events</Link></li>
+                <li>
+                  <button 
+                    onClick={() => redirectToWhatsApp("sponsor")}
+                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                  >
+                    Sponsor a Child
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => redirectToWhatsApp("volunteer")}
+                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                  >
+                    Volunteer
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => redirectToWhatsApp("event")}
+                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                  >
+                    Upcoming Events
+                  </button>
+                </li>
               </ul>
               <Button 
                 onClick={handleDonateClick}

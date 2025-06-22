@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import ContactForm from '@/components/ContactForm';
 import SEO from '@/components/SEO';
+import { redirectToWhatsApp } from '@/utils/whatsappHelper';
 
 const Contact = () => {
   useEffect(() => {
@@ -17,13 +19,15 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+256 772 477 774"],
-      color: "bg-blue-100 text-blue-600"
+      color: "bg-blue-100 text-blue-600",
+      onClick: () => redirectToWhatsApp("general")
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: ["info@kaweesaministry.org", "programs@kaweesaministry.org"],
-      color: "bg-green-100 text-green-600"
+      color: "bg-green-100 text-green-600",
+      onClick: () => redirectToWhatsApp("general")
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -76,7 +80,8 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full text-center hover:shadow-lg transition-shadow duration-300">
+                  <Card className={`h-full text-center hover:shadow-lg transition-shadow duration-300 ${info.onClick ? 'cursor-pointer' : ''}`}
+                        onClick={info.onClick}>
                     <CardContent className="p-6">
                       <div className={`w-16 h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                         {info.icon}
@@ -130,27 +135,36 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Quick Contact</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <button 
+                      onClick={() => redirectToWhatsApp("general")}
+                      className="w-full flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200 hover:bg-blue-100 transition-colors"
+                    >
                       <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                      <div>
+                      <div className="text-left">
                         <h4 className="font-semibold text-blue-900">General Inquiries</h4>
                         <p className="text-blue-700 text-sm">info@kaweesaministry.org</p>
                       </div>
-                    </div>
-                    <div className="flex items-center p-4 bg-green-50 rounded-lg border border-green-200">
+                    </button>
+                    <button 
+                      onClick={() => redirectToWhatsApp("general")}
+                      className="w-full flex items-center p-4 bg-green-50 rounded-lg border border-green-200 hover:bg-green-100 transition-colors"
+                    >
                       <Phone className="w-5 h-5 text-green-600 mr-3" />
-                      <div>
+                      <div className="text-left">
                         <h4 className="font-semibold text-green-900">Emergency Contact</h4>
                         <p className="text-green-700 text-sm">+256 772 477 774</p>
                       </div>
-                    </div>
-                    <div className="flex items-center p-4 bg-orange-50 rounded-lg border border-orange-200">
+                    </button>
+                    <button 
+                      onClick={() => redirectToWhatsApp("programs")}
+                      className="w-full flex items-center p-4 bg-orange-50 rounded-lg border border-orange-200 hover:bg-orange-100 transition-colors"
+                    >
                       <MapPin className="w-5 h-5 text-orange-600 mr-3" />
-                      <div>
+                      <div className="text-left">
                         <h4 className="font-semibold text-orange-900">Program Sites</h4>
                         <p className="text-orange-700 text-sm">Multiple locations across Uganda</p>
                       </div>
-                    </div>
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -167,12 +181,12 @@ const Contact = () => {
                 Join our mission to transform children's lives. Every conversation starts with a simple message.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/volunteer" 
+                <button 
+                  onClick={() => redirectToWhatsApp("volunteer")}
                   className="px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
                   Volunteer Today
-                </Link>
+                </button>
                 <Link 
                   to="/donate" 
                   className="px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold border border-orange-400"

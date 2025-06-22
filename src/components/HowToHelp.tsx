@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { Heart, Users, Gift, HandHeart, Calendar, Megaphone, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import DonationModal from "@/components/DonationModal";
+import { redirectToWhatsApp } from "@/utils/whatsappHelper";
 
 const HowToHelp = () => {
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
@@ -13,19 +13,6 @@ const HowToHelp = () => {
     setIsDonationModalOpen(true);
   };
 
-  const handleWhatsAppRedirect = (messageType: string) => {
-    const messages = {
-      sponsor: "Hello, I would like to sponsor a child through Kaweesa Children's Ministry. Can you please provide me with more information about the sponsorship program?",
-      volunteer: "Hello, I would like to join your team as a volunteer at Kaweesa Children's Ministry. Can you please tell me about the available volunteer opportunities?",
-      partner: "Hello, I would like to become a partner with Kaweesa Children's Ministry. Can you please provide me with information about partnership opportunities?",
-      event: "Hello, I would like to plan a fundraising event for Kaweesa Children's Ministry. Can you please guide me on how to organize an event to support your cause?"
-    };
-    
-    const message = messages[messageType as keyof typeof messages];
-    const whatsappUrl = `https://wa.me/+256772477774?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
   const ways = [
     {
       icon: Heart,
@@ -33,7 +20,7 @@ const HowToHelp = () => {
       description: "Sponsor a child's education, health, and basic needs with a monthly commitment starting from $30.",
       action: "Sponsor a Child",
       color: "bg-red-100 text-red-600",
-      onClick: () => handleWhatsAppRedirect("sponsor")
+      onClick: () => redirectToWhatsApp("sponsor")
     },
     {
       icon: Gift,
@@ -49,7 +36,7 @@ const HowToHelp = () => {
       description: "Join our team of dedicated volunteers and directly impact children's lives through your skills and time.",
       action: "Join Our Team",
       color: "bg-green-100 text-green-600",
-      onClick: () => handleWhatsAppRedirect("volunteer")
+      onClick: () => redirectToWhatsApp("volunteer")
     },
     {
       icon: HandHeart,
@@ -57,7 +44,7 @@ const HowToHelp = () => {
       description: "Partner with us as an organization, church, or business to amplify our impact in communities.",
       action: "Become a Partner",
       color: "bg-purple-100 text-purple-600",
-      onClick: () => handleWhatsAppRedirect("partner")
+      onClick: () => redirectToWhatsApp("partner")
     },
     {
       icon: Calendar,
@@ -65,7 +52,7 @@ const HowToHelp = () => {
       description: "Organize or participate in fundraising events to raise awareness and funds for our cause.",
       action: "Plan an Event",
       color: "bg-orange-100 text-orange-600",
-      onClick: () => handleWhatsAppRedirect("event")
+      onClick: () => redirectToWhatsApp("event")
     },
     {
       icon: Megaphone,
@@ -155,7 +142,7 @@ const HowToHelp = () => {
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </button>
                   <button 
-                    onClick={() => handleWhatsAppRedirect("volunteer")}
+                    onClick={() => redirectToWhatsApp("volunteer")}
                     className="w-full py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors font-medium"
                   >
                     Learn About Volunteering
