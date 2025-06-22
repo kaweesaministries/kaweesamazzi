@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEO from '@/components/SEO';
+import { redirectToWhatsApp } from '@/utils/whatsappHelper';
 
 const Volunteer = () => {
   useEffect(() => {
@@ -47,6 +48,18 @@ const Volunteer = () => {
       color: "bg-purple-100 text-purple-600"
     }
   ];
+
+  const handleApplyForRole = (roleTitle: string) => {
+    redirectToWhatsApp("volunteer", `Hello, I would like to apply for the ${roleTitle} volunteer position at Kaweesa Children's Ministry. Can you please provide me with more information about the application process?`);
+  };
+
+  const handleStartApplication = () => {
+    redirectToWhatsApp("volunteer");
+  };
+
+  const handleLearnAboutTraining = () => {
+    redirectToWhatsApp("volunteer", "Hello, I would like to learn more about the volunteer training program at Kaweesa Children's Ministry. Can you please provide me with details about the training process and requirements?");
+  };
   
   return (
     <PageLayout>
@@ -110,7 +123,10 @@ const Volunteer = () => {
                         <span className="text-sm text-orange-600 font-semibold">{opportunity.commitment}</span>
                       </div>
                       
-                      <Button className="w-full bg-orange-500 hover:bg-orange-600">
+                      <Button 
+                        onClick={() => handleApplyForRole(opportunity.title)}
+                        className="w-full bg-orange-500 hover:bg-orange-600"
+                      >
                         Apply for This Role
                       </Button>
                     </CardContent>
@@ -144,7 +160,10 @@ const Volunteer = () => {
                     <div className="text-orange-100">Upon Completion</div>
                   </div>
                 </div>
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg">
+                <Button 
+                  onClick={handleLearnAboutTraining}
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg"
+                >
                   Learn About Training
                 </Button>
               </div>
@@ -218,7 +237,10 @@ const Volunteer = () => {
             </div>
             
             <div className="text-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 text-lg">
+              <Button 
+                onClick={handleStartApplication}
+                className="bg-orange-500 hover:bg-orange-600 px-8 py-3 text-lg"
+              >
                 Start Your Application
               </Button>
               <p className="text-gray-600 mt-4">

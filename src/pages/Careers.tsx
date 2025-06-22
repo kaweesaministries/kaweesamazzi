@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Mail, Phone, Users, BookOpen, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,11 +7,16 @@ import { useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEO from '@/components/SEO';
+import { redirectToWhatsApp } from '@/utils/whatsappHelper';
 
 const Careers = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleApplyForJob = (jobTitle: string) => {
+    redirectToWhatsApp("volunteer", `Hello, I would like to apply for the ${jobTitle} position at Kaweesa Children's Ministry. Can you please provide me with more information about the application process and requirements?`);
+  };
   
   const opportunities = [
     {
@@ -140,7 +146,10 @@ const Careers = () => {
                               </div>
                             </div>
                           </div>
-                          <Button className="bg-orange-500 hover:bg-orange-600">
+                          <Button 
+                            onClick={() => handleApplyForJob(job.title)}
+                            className="bg-orange-500 hover:bg-orange-600"
+                          >
                             Apply Now
                           </Button>
                         </div>
