@@ -1,3 +1,4 @@
+
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -151,15 +152,6 @@ const About = () => {
                     </motion.div>
                   ))}
                 </div>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="mb-16"
-              >
-                <TestimonialsCarousel />
               </motion.div>
               
               <motion.div 
