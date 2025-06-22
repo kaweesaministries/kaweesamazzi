@@ -1,3 +1,4 @@
+
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -10,6 +11,21 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const leaders = [
+    {
+      name: "Kaweesa Medard",
+      role: "Founder & Executive Director",
+      bio: "5+ years in child welfare and community development",
+      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
+    },
+    {
+      name: "Rachael Namuwenge",
+      role: "Program Director",
+      bio: "Education specialist with focus on rural development",
+      image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
+    }
+  ];
   
   return (
     <PageLayout>
@@ -90,7 +106,7 @@ const About = () => {
                 className="mb-16"
               >
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-                <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+                <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm mb-8">
                   <p className="text-gray-600 mb-4">
                     Founded with a heart for Uganda's most vulnerable children, KAWEESA CHILDREN'S MINISTRY LIMITED 
                     began as a grassroots initiative to address the immediate needs of children in our local communities.
@@ -105,6 +121,37 @@ const About = () => {
                     with dignity, respect, and love. We work closely with local communities, schools, and healthcare 
                     providers to ensure our programs make a lasting impact.
                   </p>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6">Meet Our Leadership</h3>
+                <p className="text-gray-600 mb-8 text-center">
+                  Dedicated professionals committed to transforming children's lives through experienced leadership and passionate service
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  {leaders.map((leader, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                    >
+                      <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+                        <CardContent className="p-6">
+                          <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
+                            <img 
+                              src={leader.image} 
+                              alt={leader.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h4 className="text-xl font-bold mb-2">{leader.name}</h4>
+                          <p className="text-orange-600 font-medium mb-2">{leader.role}</p>
+                          <p className="text-gray-600">{leader.bio}</p>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
               
