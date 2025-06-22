@@ -15,7 +15,7 @@ const TestimonialsCarousel = () => {
       name: "Tom",
       role: "8 years old",
       content: "I am Tom. I was left alone when my family died. I used to cry a lot. Now I live with a good uncle, and Kaweesa Children's Ministries Limited helps us. I go to school, I eat every day, and I play football with friends. I want to be a teacher one day. Thank you for making me smile again.",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
+      image: "/lovable-uploads/955416bc-3ab9-473f-a1a5-c76467be4658.png"
     },
     {
       name: "Devine",
