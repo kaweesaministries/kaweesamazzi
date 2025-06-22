@@ -97,45 +97,6 @@ const Testimonials = () => {
           
           {/* Add QuickImpactStats component here */}
           <QuickImpactStats />
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {beneficiaryStories.map((story, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                  <div className="aspect-square overflow-hidden">
-                    <img 
-                      src={story.image} 
-                      alt={story.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <Quote className="w-8 h-8 text-orange-500 mr-2" />
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">{story.name}</h3>
-                        <p className="text-sm text-gray-600">{story.age} years old</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm mb-4 italic">"{story.story}"</p>
-                    <div className="flex justify-between text-xs">
-                      <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded">
-                        {story.program}
-                      </span>
-                      <span className="bg-green-100 text-green-700 px-2 py-1 rounded">
-                        {story.achievement}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
         
         <motion.div 
