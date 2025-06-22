@@ -51,10 +51,10 @@ const PhotoGallery = () => {
     },
     {
       id: '6',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0161.jpg?raw=true',
-      alt: 'Educational activities and learning',
+      src: '/lovable-uploads/fdfa6be8-c88f-443e-bf11-1bd8ec758fdc.png',
+      alt: 'Children engaged in hands-on learning activities',
       title: 'Learning Activities',
-      description: 'Interactive learning sessions helping children develop essential skills',
+      description: 'Children actively participating in educational activities with learning materials and books',
       category: 'education'
     },
     {
