@@ -91,6 +91,9 @@ const PhotoGallery = () => {
     }
   ];
 
+  console.log('PhotoGallery: Total images available:', images.length);
+  console.log('PhotoGallery: Current filter:', filter);
+
   const categories = [
     { key: 'all', label: 'All Photos' },
     { key: 'education', label: 'Education' },
@@ -103,6 +106,9 @@ const PhotoGallery = () => {
   const filteredImages = filter === 'all' 
     ? images.slice(0, 9) // Show only first 9 images for compact display
     : images.filter(img => img.category === filter).slice(0, 9);
+
+  console.log('PhotoGallery: Filtered images count:', filteredImages.length);
+  console.log('PhotoGallery: Filtered images:', filteredImages.map(img => ({ id: img.id, title: img.title })));
 
   const currentIndex = selectedImage 
     ? filteredImages.findIndex(img => img.id === selectedImage.id)
