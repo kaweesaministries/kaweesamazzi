@@ -1,4 +1,5 @@
 
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Users, Target, Shield, BookOpen, Handshake } from 'lucide-react';
@@ -85,7 +86,7 @@ const ValuesApproach = () => {
         </motion.div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-16">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -94,12 +95,12 @@ const ValuesApproach = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-l-4">
-                <CardContent className="p-6">
-                  <div className={`w-16 h-16 ${value.color} rounded-xl flex items-center justify-center mb-4 border-2`}>
+                <CardContent className="p-3 md:p-6">
+                  <div className={`w-12 h-12 md:w-16 md:h-16 ${value.color} rounded-xl flex items-center justify-center mb-2 md:mb-4 border-2`}>
                     {value.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-sm md:text-lg font-bold mb-1 md:mb-3">{value.title}</h3>
+                  <p className="text-gray-600 text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none">{value.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -120,7 +121,7 @@ const ValuesApproach = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
             {approaches.map((approach, index) => (
               <motion.div
                 key={index}
@@ -130,11 +131,11 @@ const ValuesApproach = () => {
                 className="relative"
               >
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm md:text-lg mx-auto mb-2 md:mb-4">
                     {approach.step}
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{approach.title}</h4>
-                  <p className="text-gray-600 text-sm">{approach.description}</p>
+                  <h4 className="font-semibold text-gray-900 mb-1 md:mb-2 text-xs md:text-base">{approach.title}</h4>
+                  <p className="text-gray-600 text-xs md:text-sm">{approach.description}</p>
                 </div>
                 {index < approaches.length - 1 && (
                   <div className="hidden lg:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-orange-300 to-transparent"></div>
@@ -172,3 +173,4 @@ const ValuesApproach = () => {
 };
 
 export default ValuesApproach;
+
