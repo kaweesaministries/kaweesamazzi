@@ -19,10 +19,10 @@ const PhotoGallery = () => {
     },
     {
       id: '2',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0060.jpg?raw=true',
-      alt: 'Community health and nutrition program',
+      src: '/lovable-uploads/ae20c692-add7-44e3-8cf7-3dfb41d03120.png',
+      alt: 'Children receiving nutritional support',
       title: 'Health & Nutrition',
-      description: 'Providing essential healthcare and nutrition support to children',
+      description: 'Providing essential nutrition and healthcare support to children in need',
       category: 'health'
     },
     {
