@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
@@ -116,12 +115,6 @@ const Navbar = () => {
                           <p className="text-sm text-gray-500">Join our team of dedicated volunteers</p>
                         </Link>
                       </li>
-                      <li>
-                        <Link to="/events" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Events</div>
-                          <p className="text-sm text-gray-500">Upcoming fundraisers and celebrations</p>
-                        </Link>
-                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -224,10 +217,6 @@ const Navbar = () => {
           
           <Link to="/volunteer" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
             Volunteer
-          </Link>
-          
-          <Link to="/events" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Events
           </Link>
           
           <Link to="/news" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>

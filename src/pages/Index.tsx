@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import PhotoGallery from '@/components/PhotoGallery';
@@ -13,7 +12,6 @@ import HowToHelp from '@/components/HowToHelp';
 import VolunteerOpportunitiesPreview from '@/components/VolunteerOpportunitiesPreview';
 import DonationImpactSection from '@/components/DonationImpactSection';
 import NewsPreview from '@/components/NewsPreview';
-import UpcomingEventsPreview from '@/components/UpcomingEventsPreview';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 
@@ -48,7 +46,6 @@ const Index = () => {
       <VolunteerOpportunitiesPreview />
       <DonationImpactSection />
       <NewsPreview />
-      <UpcomingEventsPreview />
     </PageLayout>
   );
 };
