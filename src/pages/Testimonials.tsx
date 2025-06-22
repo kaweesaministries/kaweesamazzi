@@ -1,10 +1,10 @@
-
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Quote, Star, Heart } from 'lucide-react';
 import { motion } from "framer-motion";
 import SEO from '@/components/SEO';
+import QuickImpactStats from '@/components/QuickImpactStats';
 
 const Testimonials = () => {
   const beneficiaryStories = [
@@ -94,7 +94,11 @@ const Testimonials = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Children's Success Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Add QuickImpactStats component here */}
+          <QuickImpactStats />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {beneficiaryStories.map((story, index) => (
               <motion.div
                 key={index}
