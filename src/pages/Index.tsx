@@ -7,8 +7,8 @@ import AboutMinistry from '@/components/AboutMinistry';
 import LeadershipPreview from '@/components/LeadershipPreview';
 import ProgramsPreview from '@/components/ProgramsPreview';
 import ImpactStories from '@/components/ImpactStories';
+import ValuesApproach from '@/components/ValuesApproach';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-import TransformationShowcase from '@/components/TransformationShowcase';
 import HowToHelp from '@/components/HowToHelp';
 import VolunteerOpportunitiesPreview from '@/components/VolunteerOpportunitiesPreview';
 import DonationImpactSection from '@/components/DonationImpactSection';
@@ -42,7 +42,7 @@ const Index = () => {
       <LeadershipPreview />
       <ProgramsPreview />
       <ImpactStories />
-      <TransformationShowcase />
+      <ValuesApproach />
       <TestimonialsCarousel />
       <HowToHelp />
       <VolunteerOpportunitiesPreview />
