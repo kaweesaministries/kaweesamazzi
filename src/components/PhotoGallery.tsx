@@ -35,10 +35,10 @@ const PhotoGallery = () => {
     },
     {
       id: '4',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0057.jpg?raw=true',
-      alt: 'Safe spaces for children',
+      src: '/lovable-uploads/930dd311-3371-4175-a89c-65d6251b494c.png',
+      alt: 'Children in a safe and protected environment',
       title: 'Child Protection',
-      description: 'Creating safe environments where children can learn and play',
+      description: 'Creating safe environments where children can learn and thrive',
       category: 'protection'
     },
     {
