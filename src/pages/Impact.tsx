@@ -43,27 +43,6 @@ const Impact = () => {
     }
   ];
   
-  const successStories = [
-    {
-      name: "Sarah's Story",
-      age: "Age 12",
-      story: "Sarah was struggling in school due to lack of supplies and proper nutrition. Through our education and feeding programs, she's now at the top of her class and dreams of becoming a doctor.",
-      image: "/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png"
-    },
-    {
-      name: "James's Journey",
-      age: "Age 15",
-      story: "After losing his parents, James was on the streets. Our shelter and education program gave him hope. He's now in secondary school and wants to become a teacher to help other children.",
-      image: "/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-    },
-    {
-      name: "Mary's Family",
-      age: "Mother of 4",
-      story: "Mary struggled to feed her children until our economic empowerment program helped her start a small business. Now she can provide for her family and send all her children to school.",
-      image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
-    }
-  ];
-  
   return (
     <PageLayout>
       <SEO 
@@ -119,41 +98,6 @@ const Impact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {successStories.map((story, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  >
-                    <Card className="h-full">
-                      <CardContent className="p-0">
-                        <div 
-                          className="h-48 bg-cover bg-center rounded-t-lg"
-                          style={{ backgroundImage: `url('${story.image}')` }}
-                        />
-                        <div className="p-6">
-                          <div className="flex items-center mb-3">
-                            <h3 className="text-xl font-bold">{story.name}</h3>
-                            <span className="ml-2 text-gray-500 text-sm">• {story.age}</span>
-                          </div>
-                          <p className="text-gray-600 italic">"{story.story}"</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
               className="bg-gray-50 rounded-xl p-8 border border-gray-200 mb-16"
             >
               <h2 className="text-3xl font-bold text-center mb-8">Program Outcomes</h2>
