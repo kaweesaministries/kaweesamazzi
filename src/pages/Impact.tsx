@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Users, BookOpen, Heart, Home, TrendingUp, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,14 +13,14 @@ const Impact = () => {
   
   const impactStats = [
     {
-      number: "500+",
+      number: "90+",
       label: "Children Supported",
       description: "Direct beneficiaries of our programs",
       icon: <Users className="w-8 h-8" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
-      number: "15",
+      number: "4",
       label: "Communities Served",
       description: "Across rural and urban Uganda",
       icon: <MapPin className="w-8 h-8" />,
@@ -35,7 +34,7 @@ const Impact = () => {
       color: "bg-orange-100 text-orange-600"
     },
     {
-      number: "200+",
+      number: "45+",
       label: "Families Empowered",
       description: "Through economic support programs",
       icon: <Home className="w-8 h-8" />,

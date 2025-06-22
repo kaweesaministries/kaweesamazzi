@@ -76,7 +76,7 @@ const Programs = () => {
           <h3 className="text-2xl font-bold mb-4">Making a Real Difference</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <div className="text-3xl font-bold mb-2">60+</div>
+              <div className="text-3xl font-bold mb-2">90+</div>
               <div className="text-orange-100">Children Supported</div>
             </div>
             <div>
