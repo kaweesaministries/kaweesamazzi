@@ -1,3 +1,5 @@
+
+
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,10 +9,10 @@ import { Link } from "react-router-dom";
 const LeadershipPreview = () => {
   const leaders = [
     {
-      name: "Rachael Namuwenge",
+      name: "Kaweesa Medard",
       role: "Founder & Executive Director",
       bio: "5+ years in child welfare and community development",
-      image: "/lovable-uploads/b70731f8-6572-4126-9b6d-63b05e47f5fe.png"
+      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
       name: "Dr. James Mukisa",
@@ -75,3 +77,4 @@ const LeadershipPreview = () => {
 };
 
 export default LeadershipPreview;
+
