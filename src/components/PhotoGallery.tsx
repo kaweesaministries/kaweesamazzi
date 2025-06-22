@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PhotoFilters from './PhotoFilters';
@@ -60,10 +59,10 @@ const PhotoGallery = () => {
     },
     {
       id: '7',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0163.jpg?raw=true',
-      alt: 'Community outreach programs',
+      src: '/lovable-uploads/623f54bd-bf74-4003-a3bd-ebe64b1a6d8b.png',
+      alt: 'Children with message of blessings and hope',
       title: 'Community Outreach',
-      description: 'Reaching out to communities with essential services and support',
+      description: 'Spreading messages of hope and blessings through community engagement',
       category: 'community'
     },
     {
