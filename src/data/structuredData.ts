@@ -3,13 +3,13 @@ export const createOrganizationStructuredData = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
-  url: 'https://kaweesachildrensministry.org',
-  logo: 'https://kaweesachildrensministry.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
+  url: 'https://kaweesachildrensministries.org',
+  logo: 'https://kaweesachildrensministries.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
   description: 'Transforming children\'s lives through love, care, education, and community development in Uganda',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'info@kaweesachildrensministry.org'
+    email: 'info@kaweesachildrensministries.org'
   },
   address: {
     '@type': 'PostalAddress',
@@ -49,18 +49,18 @@ export const createBlogPostStructuredData = (
   author: {
     '@type': 'Organization',
     name: author || 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
-    url: 'https://kaweesachildrensministry.org'
+    url: 'https://kaweesachildrensministries.org'
   },
   publisher: {
     '@type': 'Organization',
     name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kaweesachildrensministry.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
+      url: 'https://kaweesachildrensministries.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
       width: 512,
       height: 512
     },
-    url: 'https://kaweesachildrensministry.org'
+    url: 'https://kaweesachildrensministries.org'
   },
   description: description,
   keywords: keywords.join(', '),

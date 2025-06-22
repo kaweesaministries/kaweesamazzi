@@ -1,5 +1,5 @@
 
-export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://kaweesachildrensministry.org'): string => {
+export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://kaweesachildrensministries.org'): string => {
   return path.startsWith('http') ? path : `${baseUrl}${path}`;
 };
 
