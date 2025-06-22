@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion";
 import { Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,10 +13,10 @@ const LeadershipPreview = () => {
       image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
-      name: "Dr. James Mukisa",
+      name: "Rachael Namuwenge",
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
-      image: "/lovable-uploads/c4e4a1b0-789a-442a-8f11-a675ea04262e.png"
+      image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
     }
   ];
 
@@ -77,4 +75,3 @@ const LeadershipPreview = () => {
 };
 
 export default LeadershipPreview;
-
