@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { BookOpen, Heart, Home, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,7 +47,7 @@ const DonationImpactSection = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
           {donationTiers.map((tier, index) => (
             <motion.div
               key={index}
@@ -57,12 +56,12 @@ const DonationImpactSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CardContent className="p-3 md:p-6 text-center">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4">
                     {tier.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{tier.amount}</h3>
-                  <p className="text-white/90 text-sm">{tier.impact}</p>
+                  <h3 className="text-sm md:text-2xl font-bold mb-1 md:mb-3">{tier.amount}</h3>
+                  <p className="text-white/90 text-xs md:text-sm line-clamp-3 md:line-clamp-none">{tier.impact}</p>
                 </CardContent>
               </Card>
             </motion.div>
