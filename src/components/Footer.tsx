@@ -1,13 +1,15 @@
-import { ArrowRight, Linkedin, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
 import { Button } from "@/components/ui/button";
+import DonationModal from "@/components/DonationModal";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const { toast } = useToast();
 
   const handleSubscribe = async (e: React.FormEvent) => {
@@ -66,80 +68,86 @@ const Footer = () => {
   };
 
   const handleDonateClick = () => {
-    window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+    setIsDonationModalOpen(true);
   };
 
   return (
-    <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 text-orange-400">KAWEESA CHILDREN'S MINISTRY</h3>
-            <p className="text-gray-300 mb-6">
-              Transforming lives through love and care. We are dedicated to nurturing, protecting, and empowering children in Uganda through comprehensive programs that address their educational, health, and developmental needs.
-            </p>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-orange-400" />
-                <span>Kampala, Uganda</span>
+    <>
+      <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8 w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-bold mb-4 text-orange-400">KAWEESA CHILDREN'S MINISTRY</h3>
+              <p className="text-gray-300 mb-6">
+                Transforming lives through love and care. We are dedicated to nurturing, protecting, and empowering children in Uganda through comprehensive programs that address their educational, health, and developmental needs.
+              </p>
+              <div className="space-y-3 text-gray-300">
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 mr-3 text-orange-400" />
+                  <span>Kampala, Uganda</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 mr-3 text-orange-400" />
+                  <span>info@kaweesaministry.org</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 mr-3 text-orange-400" />
+                  <span>+256 772 477 774</span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-orange-400" />
-                <span>info@kaweesaministry.org</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-orange-400" />
-                <span>+256 772 477 774</span>
-              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">Get Involved</h3>
+              <ul className="space-y-3 mb-6">
+                <li><Link to="/donate" className="text-gray-300 hover:text-orange-400 transition-colors">Make a Donation</Link></li>
+                <li><Link to="/sponsor-child" className="text-gray-300 hover:text-orange-400 transition-colors">Sponsor a Child</Link></li>
+                <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400 transition-colors">Volunteer</Link></li>
+                <li><Link to="/events" className="text-gray-300 hover:text-orange-400 transition-colors">Upcoming Events</Link></li>
+              </ul>
+              <Button 
+                onClick={handleDonateClick}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium"
+              >
+                Donate Now
+              </Button>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">Learn More</h3>
+              <ul className="space-y-3">
+                <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
+                <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
+                <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
+                <li><Link to="/news" className="text-gray-300 hover:text-orange-400 transition-colors">News & Updates</Link></li>
+                <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
+                <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
+              </ul>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Get Involved</h3>
-            <ul className="space-y-3 mb-6">
-              <li><Link to="/donate" className="text-gray-300 hover:text-orange-400 transition-colors">Make a Donation</Link></li>
-              <li><Link to="/sponsor-child" className="text-gray-300 hover:text-orange-400 transition-colors">Sponsor a Child</Link></li>
-              <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400 transition-colors">Volunteer</Link></li>
-              <li><Link to="/events" className="text-gray-300 hover:text-orange-400 transition-colors">Upcoming Events</Link></li>
-            </ul>
-            <Button 
-              onClick={handleDonateClick}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium"
-            >
-              Donate with PayPal
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Learn More</h3>
-            <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
-              <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
-              <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
-              <li><Link to="/news" className="text-gray-300 hover:text-orange-400 transition-colors">News & Updates</Link></li>
-              <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
-              <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
-            </ul>
+          <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <p className="text-gray-400 text-sm mb-2">
+                © {new Date().getFullYear()} KAWEESA CHILDREN'S MINISTRY LIMITED. All rights reserved.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Registration Number: 80020002328043 | Company Limited by Guarantee
+              </p>
+            </div>
+            <div className="flex space-x-6">
+              <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</Link>
+              <Link to="/contact" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Contact Us</Link>
+            </div>
           </div>
         </div>
-        
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm mb-2">
-              © {new Date().getFullYear()} KAWEESA CHILDREN'S MINISTRY LIMITED. All rights reserved.
-            </p>
-            <p className="text-gray-400 text-sm">
-              Registration Number: 80020002328043 | Company Limited by Guarantee
-            </p>
-          </div>
-          <div className="flex space-x-6">
-            <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Contact Us</Link>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+
+      <DonationModal 
+        isOpen={isDonationModalOpen} 
+        onClose={() => setIsDonationModalOpen(false)}
+      />
+    </>
   );
 };
 
