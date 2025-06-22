@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
@@ -120,25 +121,11 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn(isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                    Stories
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 w-[400px]">
-                      <li>
-                        <Link to="/news" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">News & Updates</div>
-                          <p className="text-sm text-gray-500">Latest news from our programs</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/testimonials" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Success Stories</div>
-                          <p className="text-sm text-gray-500">Inspiring testimonials and transformations</p>
-                        </Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
+                  <Link to="/testimonials">
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
+                      Success Stories
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
@@ -219,8 +206,8 @@ const Navbar = () => {
             Volunteer
           </Link>
           
-          <Link to="/news" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            News
+          <Link to="/testimonials" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+            Success Stories
           </Link>
           
           <Link to="/contact" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>

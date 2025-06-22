@@ -9,8 +9,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
-import News from "./pages/News";
-import NewsDetail from "./pages/NewsDetail";
 import Donate from "./pages/Donate";
 import Volunteer from "./pages/Volunteer";
 import Impact from "./pages/Impact";
@@ -35,8 +33,6 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<Programs />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/news/:slug" element={<NewsDetail />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/volunteer" element={<Volunteer />} />

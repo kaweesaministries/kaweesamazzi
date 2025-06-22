@@ -1,4 +1,3 @@
-
 import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -148,7 +147,6 @@ const Footer = () => {
                 <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
                 <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
                 <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
-                <li><Link to="/news" className="text-gray-300 hover:text-orange-400 transition-colors">News & Updates</Link></li>
                 <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
                 <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
               </ul>
