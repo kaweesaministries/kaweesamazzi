@@ -80,6 +80,14 @@ const PhotoGallery = () => {
       title: 'Health & Wellness',
       description: 'Promoting health and wellness through various community programs',
       category: 'health'
+    },
+    {
+      id: '10',
+      src: '/lovable-uploads/27090a33-68ee-40ec-9160-5d11f87e4799.png',
+      alt: 'Children engaged in hands-on learning activities',
+      title: 'Interactive Learning Sessions',
+      description: 'Children actively participating in educational activities with learning materials and books',
+      category: 'education'
     }
   ];
 
