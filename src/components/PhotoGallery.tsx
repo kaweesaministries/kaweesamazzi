@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PhotoFilters from './PhotoFilters';
@@ -12,10 +11,10 @@ const PhotoGallery = () => {
   const images: GalleryImage[] = [
     {
       id: '1',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0062.jpg?raw=true',
-      alt: 'Children receiving educational support',
+      src: '/lovable-uploads/3a8f2e41-a6d3-400f-bb16-b3639668dac5.png',
+      alt: 'Children showing love for education',
       title: 'Education Program',
-      description: 'Students participating in our literacy and education support program',
+      description: 'Students showing their love for learning and education support programs',
       category: 'education'
     },
     {
