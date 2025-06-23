@@ -88,6 +88,14 @@ const PhotoGallery = () => {
       title: 'Interactive Learning Sessions',
       description: 'Children actively participating in educational activities with learning materials and books',
       category: 'education'
+    },
+    {
+      id: '11',
+      src: '/lovable-uploads/17e70d34-166f-4068-8e12-09de2c2de513.png',
+      alt: 'Children in prayer and community gathering',
+      title: 'Prayer & Community Unity',
+      description: 'Children coming together in prayer and showing gratitude in our community programs',
+      category: 'community'
     }
   ];
 
