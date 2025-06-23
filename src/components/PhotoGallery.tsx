@@ -43,7 +43,7 @@ const PhotoGallery = () => {
     },
     {
       id: '5',
-      src: '/lovable-uploads/new-community-event.png',
+      src: '/lovable-uploads/17e70d34-166f-4068-8e12-09de2c2de513.png',
       alt: 'Community gathering and events',
       title: 'Community Events',
       description: 'Bringing families and communities together for support and celebration',
