@@ -1,10 +1,9 @@
-
 export const createOrganizationStructuredData = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
   url: 'https://kaweesachildrensministries.org',
-  logo: 'https://kaweesachildrensministries.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
+  logo: 'https://kaweesachildrensministries.org/lovable-uploads/d4aa9dda-f549-4c67-92aa-5a86592a3467.png',
   description: 'Transforming children\'s lives through love, care, education, and community development in Uganda',
   contactPoint: {
     '@type': 'ContactPoint',
@@ -56,7 +55,7 @@ export const createBlogPostStructuredData = (
     name: 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kaweesachildrensministries.org/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png',
+      url: 'https://kaweesachildrensministries.org/lovable-uploads/d4aa9dda-f549-4c67-92aa-5a86592a3467.png',
       width: 512,
       height: 512
     },
