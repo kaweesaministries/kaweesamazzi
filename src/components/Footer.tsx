@@ -1,3 +1,4 @@
+
 import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -166,6 +167,21 @@ const Footer = () => {
               <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</Link>
               <Link to="/contact" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Contact Us</Link>
             </div>
+          </div>
+
+          {/* Developer Credit */}
+          <div className="pt-4 border-t border-gray-800 text-center">
+            <p className="text-gray-500 text-xs">
+              Developed by{' '}
+              <a 
+                href="https://drewversedesign.online" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                Drewverse Design
+              </a>
+            </p>
           </div>
         </div>
       </footer>
