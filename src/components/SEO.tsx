@@ -65,6 +65,30 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywordString} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
+      {/* Enhanced SEO Meta Tags */}
+      <meta name="author" content={author || name} />
+      <meta name="publisher" content="KAWEESA CHILDREN'S MINISTRY LIMITED" />
+      <meta name="copyright" content="KAWEESA CHILDREN'S MINISTRY LIMITED" />
+      <meta name="language" content="en" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      <meta name="revisit-after" content="1 days" />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow" />
+      
+      {/* Geographic SEO */}
+      <meta name="geo.region" content="UG" />
+      <meta name="geo.placename" content="Kampala, Uganda" />
+      <meta name="geo.position" content="0.3136;32.5811" />
+      <meta name="ICBM" content="0.3136, 32.5811" />
+      
+      {/* Performance & Security */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={isBlogPost ? 'article' : type} />
       <meta property="og:url" content={currentUrl} />
@@ -73,12 +97,15 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${title} - Logo`} />
       <meta property="og:site_name" content="KAWEESA CHILDREN'S MINISTRY LIMITED" />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="en_GB" />
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {isBlogPost && <meta property="article:publisher" content="https://kaweesachildrensministry.org" />}
+      {isBlogPost && <meta property="article:publisher" content="https://kaweesachildrensministries.org" />}
+      {isBlogPost && <meta property="article:author" content={author || name} />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -86,18 +113,32 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImageUrl} />
+      <meta name="twitter:image:alt" content={`${title} - Logo`} />
+      <meta name="twitter:creator" content="@KaweesaChildren" />
+      <meta name="twitter:site" content="@KaweesaChildren" />
       
       {/* LinkedIn specific */}
       <meta property="og:image:secure_url" content={absoluteImageUrl} />
-      <meta name="author" content={author || name} />
       
       {/* Pinterest specific */}
       <meta name="pinterest:description" content={description} />
       <meta name="pinterest:image" content={absoluteImageUrl} />
+      <meta name="pinterest:url" content={currentUrl} />
+      
+      {/* WhatsApp specific */}
+      <meta property="og:image:type" content="image/png" />
       
       {/* Additional SEO meta tags */}
       <meta name="theme-color" content="#ea580c" />
       <meta name="msapplication-TileColor" content="#ea580c" />
+      <meta name="msapplication-TileImage" content={absoluteImageUrl} />
+      <meta name="apple-mobile-web-app-title" content="Kaweesa Children's Ministry" />
+      <meta name="application-name" content="Kaweesa Children's Ministry" />
+      
+      {/* Mobile optimization */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       
       {/* JSON-LD structured data */}
       <script type="application/ld+json">
