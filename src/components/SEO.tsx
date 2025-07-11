@@ -15,7 +15,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'KAWEESA CHILDREN\'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
   name = 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
-  imageUrl = '/lovable-uploads/social-preview-image.png',
+  imageUrl = '/lovable-uploads/favicon-logo.png',
   publishDate,
   modifiedDate,
   author,
